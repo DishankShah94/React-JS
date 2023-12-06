@@ -7,6 +7,7 @@ import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import LoginCompo from "../Pages/LoginCompo";
 import RegistrationCompo from "../Pages/RegistrationCompo";
+import LatestCollection from "../Component/LatestCollection";
 
 const MainRouter = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const MainRouter = createBrowserRouter([
       <>
         <HeaderFile />
         <Slider />
+        <LatestCollection />
         {/* <Main /> */}
         {/* <Link to="/"></Link> */}
       </>
