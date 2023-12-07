@@ -8,6 +8,9 @@ import Contact from "../Pages/Contact";
 import LoginCompo from "../Pages/LoginCompo";
 import RegistrationCompo from "../Pages/RegistrationCompo";
 import LatestCollection from "../Component/LatestCollection";
+import ManyMoreDetails from "../Pages/ManyMoreDetails.jsx";
+import ProductApi from "../Component/ProductApi.jsx";
+
 
 const MainRouter = createBrowserRouter([
   {
@@ -57,6 +60,22 @@ const MainRouter = createBrowserRouter([
         <RegistrationCompo />
       </>
     )
+  },
+  {
+    path: "/manymore",
+    element: (
+      <>
+        <HeaderFile />
+        <ManyMoreDetails />
+      </>
+    )
+  },
+  {
+    path: "/productapi",
+    element: (<>
+      <HeaderFile />
+      <ProductApi />
+    </>)
   }
 ]);
 export default MainRouter;

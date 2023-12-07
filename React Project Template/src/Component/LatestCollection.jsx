@@ -1,5 +1,5 @@
 import LatestCollectionBox from "./LatestCollectionBox";
-import ProductApi from "./ProductApi";
+// import ProductApi from "./ProductApi";
 
 const LatestCollection = () => {
     return (<>
@@ -29,11 +29,19 @@ const LatestCollection = () => {
                         </ul>
                         {/* https://fakestoreapi.com/products */}
                         <ul class="portfolio-area clearfix">
-                            <LatestCollectionBox />
+                            <LatestCollectionBox img='assests/images/g1.jpg' />
+                            <LatestCollectionBox img='assests/images/g2.jpg' />
+                            <LatestCollectionBox img='assests/images/g3.jpg' />
+                            <LatestCollectionBox img='assests/images/g4.jpg' />
+                            <LatestCollectionBox img='assests/images/g5.jpg' />
+                            <LatestCollectionBox img='assests/images/g6.jpg' />
+                            <LatestCollectionBox img='assests/images/g7.jpg' />
+                            <LatestCollectionBox img='assests/images/g8.jpg' />
+                            <LatestCollectionBox img='assests/images/g9.jpg' />
                         </ul>
-                        <ul className="portfolio-area clearfix">
+                        {/* <ul className="portfolio-area clearfix">
                             <ProductApi />
-                        </ul>
+                        </ul> */}
                         {/* <!--end portfolio-area --> */}
                     </div>
                 </div>

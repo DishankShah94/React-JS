@@ -52,12 +52,17 @@ const HeaderFie = () => {
                                     <i className="fas fa-angle-down"></i>
                                 </a>
                                 <div className={showBasic ? "dropdown-menu display-block" : "dropdown-menu"} aria-labelledby="navbarDropdownMenuLink">
-                                    <Link className="dropdown-item" to="/login" onClick={()=>{setShowBasic(!showBasic)}}>Signin</Link>
+                                    <Link className="dropdown-item" to="/login" onClick={() => { setShowBasic(!showBasic) }}>Signin</Link>
                                     {/* <a className="dropdown-item" href="404.html">404</a> */}
                                     <div className="dropdown-divider"></div>
                                     <a className="dropdown-item" href="soon.html">Comingsoon</a>
 
                                 </div>
+                            </li>
+                            <li className="nav-item">
+                                {/* <a className="nav-link cool" href="about.html">About</a> */}
+                                <Link className="nav-link " to="/productapi">Product Api</Link>
+
                             </li>
                         </ul>
 

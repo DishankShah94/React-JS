@@ -1,4 +1,4 @@
-const LatestCollectionBox = () => {
+const LatestCollectionBox = (props) => {
     return (<>
 
         <li class="portfolio-item2" data-id="id-0" data-type="cat-item-4">
@@ -6,13 +6,13 @@ const LatestCollectionBox = () => {
                 <span class="image-block img-hover">
                     <a class="image-zoom rounded" href="images/g1.jpg" data-gal="prettyPhoto[gallery]">
 
-                        <img src="/assests/images/g1.jpg" class="img-fluid rounded" alt="" />
+                        <img src={props.img} class="img-fluid rounded" alt="" />
 
                     </a>
                 </span>
             </div>
         </li>
-        <li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
+        {/* <li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
             <div>
                 <span class="image-block">
                     <a class="image-zoom" href="images/g2.jpg" data-gal="prettyPhoto[gallery]">
@@ -99,7 +99,7 @@ const LatestCollectionBox = () => {
                     </a>
                 </span>
             </div>
-        </li>
+        </li> */}
 
     </>);
 }
