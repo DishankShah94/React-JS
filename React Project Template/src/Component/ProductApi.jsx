@@ -9,6 +9,9 @@ import { useCallback, useEffect, useState } from "react";
 // } from 'mdb-react-ui-kit';
 import { Link } from "react-router-dom";
 import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import ProductDetails from "./ProductDetails";
+// import ProductDetails from "./ProductDetails";
+
 const ProductApi = () => {
     const [product, setProduct] = useState([]);
     // const [product2, setProduct2] = useState([]);
@@ -59,6 +62,7 @@ const ProductApi = () => {
                     (
                         <MDBCol md='4' className="mt-2" key={index}>
                             <Link to={"/productsdetails/" + product.id}>
+
                                 <div class="card">
                                     <img src={product.image} alt={product.title} style={{ aspectRatio: '1/1', objectFit: 'contain' }} class="card-img-top" />
                                     <div class="card-body">
@@ -84,6 +88,7 @@ const ProductApi = () => {
                                             <h5 class="card-title">{product.title}</h5>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             {/* <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a> */}
+                                            <ProductDetails imgsrc={product.image} />
                                             <Link to="/manymore">More Details</Link>
                                             {product.price}
                                         </div>
@@ -93,6 +98,7 @@ const ProductApi = () => {
                         )
                     ))}
                 </>}
+
             </MDBRow>
             <MDBRow className="my-3">
                 <MDBCol>

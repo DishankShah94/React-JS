@@ -10,6 +10,7 @@ import RegistrationCompo from "../Pages/RegistrationCompo";
 import LatestCollection from "../Component/LatestCollection";
 import ManyMoreDetails from "../Pages/ManyMoreDetails.jsx";
 import ProductApi from "../Component/ProductApi.jsx";
+import ProductDetails from "../Component/ProductDetails.jsx";
 
 
 const MainRouter = createBrowserRouter([
@@ -76,6 +77,15 @@ const MainRouter = createBrowserRouter([
       <HeaderFile />
       <ProductApi />
     </>)
+  },
+  {
+    path: "/productsdetails/:id",
+    element: (
+      <>
+        <HeaderFile />
+        <ProductDetails />
+      </>
+    )
   }
 ]);
 export default MainRouter;

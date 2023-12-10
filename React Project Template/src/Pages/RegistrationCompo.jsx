@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import CustomHook from '../Hook/CustomHook';
 
 const RegistrationCompo = () => {
-    const [state, setState] = useState({ formData: "" })
-    const setData = (event) => {
-        setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
-    }
+    // const [state, setState] = useState({ formData: "" })
+    const { handleChange, inp, errors } = CustomHook({}, {})
+    // const setData = (event) => {
+    //     // setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
+    // }
     return (
         <>
             <div className="container">
@@ -15,15 +17,18 @@ const RegistrationCompo = () => {
                             <div className="card-body">
 
                                 <form>
+                                    {JSON.stringify(inp)}
                                     <div className="row">
                                         <div className="col">
-                                            <input type="text" placeholder='Enter User Name' className='form-control' onChange={setData} name="uname" required />
+                                            <input type="text" placeholder='Enter User Name' className='form-control' onChange={handleChange} onBlur={handleChange} name="uname" required />
+                                            {errors.unameError ? <span>This field is required</span> : ""}
                                         </div>
 
                                     </div>
                                     <div className="row mt-3">
                                         <div className="col">
-                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={setData} name="pass" required />
+                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="pass" required />
+                                            {errors.upassError ? <span>This field is required</span> : ""}
                                         </div>
 
                                     </div>
