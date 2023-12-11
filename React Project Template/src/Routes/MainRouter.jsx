@@ -11,6 +11,7 @@ import LatestCollection from "../Component/LatestCollection";
 import ManyMoreDetails from "../Pages/ManyMoreDetails.jsx";
 import ProductApi from "../Component/ProductApi.jsx";
 import ProductDetails from "../Component/ProductDetails.jsx";
+import SeatSelector from "../Component/SeatSelector.jsx";
 
 
 const MainRouter = createBrowserRouter([
@@ -84,6 +85,15 @@ const MainRouter = createBrowserRouter([
       <>
         <HeaderFile />
         <ProductDetails />
+      </>
+    )
+  },
+  {
+    path: "/seatSelector",
+    element: (
+      <>
+        <HeaderFile />
+        <SeatSelector />
       </>
     )
   }

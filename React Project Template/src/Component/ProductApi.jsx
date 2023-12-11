@@ -14,6 +14,8 @@ import ProductDetails from "./ProductDetails";
 
 const ProductApi = () => {
     const [product, setProduct] = useState([]);
+
+    const [selectedProduct, setSelectedProduct] = useState(null);
     // const [product2, setProduct2] = useState([]);
     // const [startingProductId, setStartingProductId] = useState(3);
     const [loadall, setLoadAll] = useState(false);
@@ -52,6 +54,7 @@ const ProductApi = () => {
     // useEffect(() => {
     //     manymore();
     // }, [manymore]);
+
     useEffect(() => {
         fetchData();
     }, [fetchData])
@@ -63,6 +66,7 @@ const ProductApi = () => {
                         <MDBCol md='4' className="mt-2" key={index}>
                             <Link to={"/productsdetails/" + product.id}>
 
+                                {/* <Link to={{ pathname: "/productsdetails/" + product.id, state: { productDetails: product } }}> */}
                                 <div class="card">
                                     <img src={product.image} alt={product.title} style={{ aspectRatio: '1/1', objectFit: 'contain' }} class="card-img-top" />
                                     <div class="card-body">
@@ -88,7 +92,7 @@ const ProductApi = () => {
                                             <h5 class="card-title">{product.title}</h5>
                                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                             {/* <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a> */}
-                                            <ProductDetails imgsrc={product.image} />
+                                            {/* <ProductDetails imgsrc={product.image} /> */}
                                             <Link to="/manymore">More Details</Link>
                                             {product.price}
                                         </div>
@@ -100,10 +104,13 @@ const ProductApi = () => {
                 </>}
 
             </MDBRow>
+
             <MDBRow className="my-3">
                 <MDBCol>
                     <button onClick={manymore} className="btn btn-primary d-block mx-auto">Many More</button>
+
                 </MDBCol>
+                {selectedProduct && <ProductDetails productId={selectedProduct.id} />}
             </MDBRow>
         </div>
     </>);

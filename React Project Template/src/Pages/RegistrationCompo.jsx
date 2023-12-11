@@ -27,7 +27,7 @@ const RegistrationCompo = () => {
                                     </div>
                                     <div className="row mt-3">
                                         <div className="col">
-                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="pass" required />
+                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="upass" required />
                                             {errors.upassError ? <span>This field is required</span> : ""}
                                         </div>
 

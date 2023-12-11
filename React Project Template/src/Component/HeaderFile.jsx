@@ -64,6 +64,9 @@ const HeaderFie = () => {
                                 <Link className="nav-link " to="/productapi">Product Api</Link>
 
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/seatSelector">Seat Selector</Link>
+                            </li>
                         </ul>
 
                     </div>
