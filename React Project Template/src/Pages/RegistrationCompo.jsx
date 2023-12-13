@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CustomHook from '../Hook/CustomHook';
+import { useNavigate } from 'react-router-dom';
 
 const RegistrationCompo = () => {
+    const [message, setMessage] = useState("");
     // const [state, setState] = useState({ formData: "" })
     const { handleChange, inp, errors } = CustomHook({}, {})
+    const navigate = useNavigate();
     // const setData = (event) => {
     //     // setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
     // }
+    const savedata = () => {
+        if (!inp.uname || !inp.uemail || !inp.upass || !inp.umobile) {
+            setMessage("please enter all fields")
+        }
+        else {
+            fetch("http://localhost:5000/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json", //sent request
+                    "Accept": "application/json",
+                },
+                body: JSON.stringify(inp)
+            }).then((res) => { console.log(res); res.json() }).then((response) => {
+                console.log(response);
+                navigate("/login");
+            })
+        }
+
+    }
     return (
         <>
             <div className="container">
@@ -25,6 +47,12 @@ const RegistrationCompo = () => {
                                         </div>
 
                                     </div>
+                                    <div className='row mt-3'>
+                                        <div className="col">
+                                            <input type="email" placeholder='Enter Email Address' className='form-control' onChange={handleChange} onBlur={handleChange} name='uemail' required />
+                                            {errors.uemailError ? <span>This field is required</span> : ""}
+                                        </div>
+                                    </div>
                                     <div className="row mt-3">
                                         <div className="col">
                                             <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="upass" required />
@@ -33,13 +61,20 @@ const RegistrationCompo = () => {
 
                                     </div>
                                     <div className="row mt-3">
+                                        <div className="col">
+                                            <input type="tel" placeholder='Enter Mobile Number' className='form-control' onChange={handleChange} onBlur={handleChange} name='umobile' required />
+                                            {errors.umobileError ? <span>This field is required</span> : ""}
+                                        </div>
+                                    </div>
+                                    <div className="row mt-3">
                                         <div className="col text-center">
 
-                                            <input type="submit" className='btn btn-info' /> &nbsp;
+                                            <input type="button" value="submit" className='btn btn-info' onClick={savedata} /> &nbsp;
                                             <input type="reset" className='btn btn-warning' />
                                         </div>
 
                                     </div>
+                                    <p>{message}</p>
                                 </form>
                             </div>
                         </div>

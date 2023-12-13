@@ -6,6 +6,12 @@ const LoginCompo = () => {
     const setData = (event) => {
         setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
     }
+    const login = () => {
+        console.log("called");
+        fetch(`http://localhost:5000/users?email=${state.formData.uname}&password=${state.formData.pass}`).then((res) => { return res.json() }).then((response) => {
+            console.log(response);
+        })
+    }
     return (
         <>
             <div className="container">
@@ -15,7 +21,7 @@ const LoginCompo = () => {
                             <div className="card-header text-center">Login</div>
                             <div className="card-body">
 
-                                <form>
+                                <form onSubmit={login}>
                                     <div className="row">
                                         <div className="col">
                                             {/* <label>Username </label> */}
