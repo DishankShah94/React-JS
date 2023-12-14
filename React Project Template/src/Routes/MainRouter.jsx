@@ -12,6 +12,7 @@ import ManyMoreDetails from "../Pages/ManyMoreDetails.jsx";
 import ProductApi from "../Component/ProductApi.jsx";
 import ProductDetails from "../Component/ProductDetails.jsx";
 import SeatSelector from "../Component/SeatSelector.jsx";
+import Logout from "../Pages/Logout.jsx";
 
 
 const MainRouter = createBrowserRouter([
@@ -51,6 +52,15 @@ const MainRouter = createBrowserRouter([
       <>
         <HeaderFile />
         <LoginCompo />
+      </>
+    )
+  },
+  {
+    path: "/logout",
+    element: (
+      <>
+        <HeaderFile />
+        <Logout />
       </>
     )
   },

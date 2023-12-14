@@ -1,63 +1,32 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "dishank",
-      "email": "dishank@gmail.com",
-      "password": "123"
-    },
-    {
-      "username": "Siddharth",
-      "email": "siddharth@gmail.com",
-      "password": "123456",
-      "id": 3
-    },
-    {
-      "username": "Virat",
-      "email": "virat@gmail.com",
-      "password": "virat",
-      "id": 2
-    },
-    {
-      "username": "Sachin",
-      "email": "sachin@gmail.com",
-      "password": "sachin",
-      "id": 4
-    },
-    {
       "uname": "Dishu",
       "uemail": "dishu@gmail.com",
       "upass": "dishu",
       "umobile": "7845784512",
-      "id": 5
+      "id": 1
     },
     {
       "uname": "Sidhu",
       "uemail": "sidhu@gmail.com",
       "upass": "sidhu",
       "umobile": "9878455210",
-      "id": 6
+      "id": 2
     },
     {
-      "uname": "Dishu",
-      "uemail": "dishu@gmail.com",
-      "upass": "dishu",
-      "umobile": "9812452140",
-      "id": 7
-    },
-    {
-      "uname": "dishu",
-      "uemail": "d",
-      "upass": "d",
-      "umobile": "d",
-      "id": 8
-    },
-    {
-      "uname": "aaa",
-      "uemail": "aaa@gmail.com",
-      "upass": "ddd",
+      "uname": "Siddharth",
+      "uemail": "siddharth@gmail.com",
+      "upass": "siddharth",
       "umobile": "9878455412",
-      "id": 9
+      "id": 3
+    },
+    {
+      "uname": "Dishank",
+      "uemail": "dishank@gmail.com",
+      "upass": "dishank",
+      "umobile": "9845125220",
+      "id": 4
     }
   ]
 }
