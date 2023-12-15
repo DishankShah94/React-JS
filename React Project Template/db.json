@@ -1,32 +1,60 @@
 {
   "users": [
     {
+      "uname": "admin",
+      "email": "admin@mail.com",
+      "password": "123",
+      "umobile": "7845784513",
+      "id": 1,
+      "role": "1"
+    },
+    {
       "uname": "Dishu",
       "uemail": "dishu@gmail.com",
       "upass": "dishu",
       "umobile": "7845784512",
-      "id": 1
+      "id": 2,
+      "role": "2"
     },
     {
       "uname": "Sidhu",
       "uemail": "sidhu@gmail.com",
       "upass": "sidhu",
       "umobile": "9878455210",
-      "id": 2
+      "id": 3,
+      "role": "2"
     },
     {
+      "role": "2",
       "uname": "Siddharth",
       "uemail": "siddharth@gmail.com",
       "upass": "siddharth",
       "umobile": "9878455412",
-      "id": 3
+      "id": 4
     },
     {
+      "role": "2",
       "uname": "Dishank",
       "uemail": "dishank@gmail.com",
       "upass": "dishank",
       "umobile": "9845125220",
-      "id": 4
+      "id": 5
+    },
+    {
+      "role": "2",
+      "uname": "sahil",
+      "uemail": "sahil@gmail.com",
+      "upass": "sahil",
+      "umobile": "9845122201",
+      "id": 6
+    },
+    {
+      "role": "2",
+      "uname": "Virat",
+      "uemail": "virat@gmail.com",
+      "upass": "123",
+      "umobile": "9845122452",
+      "id": 7
     }
   ]
 }

@@ -6,8 +6,9 @@ const LoginCompo = () => {
     // const setData = (event) => {
     //     setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
     // }
-    const { handleChange, inp, errors } = CustomHook({ "role": "1" }, {})
+    const { handleChange, inp, errors } = CustomHook({}, {})
     // const [user, setUser] = useState([]);
+    const [loginError, setLoginError] = useState(false);
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
     const login = (e) => {
@@ -22,17 +23,27 @@ const LoginCompo = () => {
                 // console.log(usernames);
                 // const passwords = data.map(pass => pass.upass);
                 // console.log(passwords);
-                const user = data.find((user) => user.uname === inp.uname && user.upass === inp.upass);
-
-                if (user) {
-                    // If a matching user is found, navigate to the desired location
-                    navigate('/logout');
+                // const user = data.find((user) => user.uname === inp.uname && user.upass === inp.upass);
+                if (data.length > 0) {
+                    console.log(data[0].role);
+                    setLoginError(false)
+                    if (data[0].role == 1) {
+                        navigate('/admindahsboard')
+                    } else {
+                        navigate('/about')
+                    }
                 } else {
-                    // If no matching user is found, you can handle this case (e.g., show an error message)
-                    console.log("Invalid username or password");
-                    // alert('Invalid username or password')
-                    setMessage("Invalid Login and Password");
+                    setLoginError(true)
                 }
+                // if (user) {
+                //     // If a matching user is found, navigate to the desired location
+                //     navigate('/logout');
+
+                //     // If no matching user is found, you can handle this case (e.g., show an error message)
+                //     console.log("Invalid username or password");
+                //     // alert('Invalid username or password')
+                //     setMessage("Invalid Login and Password");
+                // }
             })
 
     }

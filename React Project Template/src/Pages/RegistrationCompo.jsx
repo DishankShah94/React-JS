@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const RegistrationCompo = () => {
     const [message, setMessage] = useState("");
     // const [state, setState] = useState({ formData: "" })
-    const { handleChange, inp, errors } = CustomHook({}, {})
+    const { handleChange, inp, errors } = CustomHook({ "role": "2" }, {})
     const navigate = useNavigate();
     // const setData = (event) => {
     //     // setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))

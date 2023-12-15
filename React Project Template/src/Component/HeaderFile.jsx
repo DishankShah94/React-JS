@@ -45,6 +45,10 @@ const HeaderFie = () => {
                                 {/* <a className="nav-link cool" href="price.html">Pricing</a> */}
                                 <Link className="nav-link " to="/contact">Contact</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/setlocalstorage">Local Storage</Link>
+                            </li>
+
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle cool" onClick={() => { setShowBasic(!showBasic) }} href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
@@ -52,16 +56,18 @@ const HeaderFie = () => {
                                     <i className="fas fa-angle-down"></i>
                                 </a>
                                 <div className={showBasic ? "dropdown-menu display-block" : "dropdown-menu"} aria-labelledby="navbarDropdownMenuLink">
-                                    {showBasic ? <>
+                                    {/* {showBasic ? <>
                                         <Link className="dropdown-item" to="/login" onClick={() => { setShowBasic(!showBasic) }}>Signin</Link>
 
                                     </> : <>
                                         <Link className="dropdown-item" to="/logout" onClick={() => { setShowBasic(!showBasic) }}>Logout</Link>
 
-                                    </>}
+                                    </>} */}
+                                    <Link className="dropdown-item" to="/login" onClick={() => { setShowBasic(!showBasic) }}>Signin</Link>
+
                                     {/* <a className="dropdown-item" href="404.html">404</a> */}
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="soon.html">Comingsoon</a>
+                                    {/* <div className="dropdown-divider"></div>     */}
+                                    {/* <a className="dropdown-item" href="soon.html">Comingsoon</a> */}
 
                                 </div>
                             </li>
@@ -76,30 +82,30 @@ const HeaderFie = () => {
                         </ul>
 
                     </div>
-                    <div className="header-search-agileits-w3ls">
-                        <form action="#" method="post">
-                            <div className="search">
-                                <input className="form-control" type="search" placeholder="Search here..." name="Search" required="" />
-                            </div>
-                            <div className="section_room">
-                                <select id="country" onchange="change_country(this.value)" className="frm-field required">
-                                    <option value="null">All Items</option>
-                                    <option value="null">Gold </option>
-                                    <option value="AX">Rings </option>
-                                    <option value="AX">Watches</option>
-                                    <option value="AX">Necklace</option>
-                                    <option value="AX">Bracelets</option>
-                                </select>
-                            </div>
-                            <div className="sear-sub">
-                                <button className="btn btn1">
-                                    <i className="fas fa-search"></i>
-                                </button>
+                    {/* <div className="header-search-agileits-w3ls">
+                            <form action="#" method="post">
+                                <div className="search">
+                                    <input className="form-control" type="search" placeholder="Search here..." name="Search" required="" />
+                                </div>
+                                <div className="section_room">
+                                    <select id="country" onchange="change_country(this.value)" className="frm-field required">
+                                        <option value="null">All Items</option>
+                                        <option value="null">Gold </option>
+                                        <option value="AX">Rings </option>
+                                        <option value="AX">Watches</option>
+                                        <option value="AX">Necklace</option>
+                                        <option value="AX">Bracelets</option>
+                                    </select>
+                                </div>
+                                <div className="sear-sub">
+                                    <button className="btn btn1">
+                                        <i className="fas fa-search"></i>
+                                    </button>
 
-                            </div>
-                            <div className="clearfix"></div>
-                        </form>
-                    </div>
+                                </div>
+                                <div className="clearfix"></div>
+                            </form>
+                        </div> */}
                 </nav>
 
             </div>

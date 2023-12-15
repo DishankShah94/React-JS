@@ -13,6 +13,7 @@ import ProductApi from "../Component/ProductApi.jsx";
 import ProductDetails from "../Component/ProductDetails.jsx";
 import SeatSelector from "../Component/SeatSelector.jsx";
 import Logout from "../Pages/Logout.jsx";
+import SetStorage from "../Pages/SetStorage.jsx";
 
 
 const MainRouter = createBrowserRouter([
@@ -104,6 +105,15 @@ const MainRouter = createBrowserRouter([
       <>
         <HeaderFile />
         <SeatSelector />
+      </>
+    )
+  },
+  {
+    path: "/setlocalstorage",
+    element: (
+      <>
+        {/* <HeaderFile /> */}
+        <SetStorage />
       </>
     )
   }
