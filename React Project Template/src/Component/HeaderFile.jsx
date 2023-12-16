@@ -45,9 +45,6 @@ const HeaderFie = () => {
                                 {/* <a className="nav-link cool" href="price.html">Pricing</a> */}
                                 <Link className="nav-link " to="/contact">Contact</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/setlocalstorage">Local Storage</Link>
-                            </li>
 
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle cool" onClick={() => { setShowBasic(!showBasic) }} href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
@@ -64,6 +61,8 @@ const HeaderFie = () => {
 
                                     </>} */}
                                     <Link className="dropdown-item" to="/login" onClick={() => { setShowBasic(!showBasic) }}>Signin</Link>
+                                    <Link className="dropdown-item" to="/setlocalstorage" onClick={() => { setShowBasic(!showBasic) }}>Local Storage</Link>
+                                    <Link className="dropdown-item" to="/cookieex" onClick={() => { setShowBasic(!showBasic) }}>Cookie</Link>
 
                                     {/* <a className="dropdown-item" href="404.html">404</a> */}
                                     {/* <div className="dropdown-divider"></div>     */}

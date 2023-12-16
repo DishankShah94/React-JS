@@ -14,6 +14,8 @@ import ProductDetails from "../Component/ProductDetails.jsx";
 import SeatSelector from "../Component/SeatSelector.jsx";
 import Logout from "../Pages/Logout.jsx";
 import SetStorage from "../Pages/SetStorage.jsx";
+import Admindashboard from "../Pages/Admindashboard.jsx";
+import Cookieex from "../Pages/Cookie.jsx";
 
 
 const MainRouter = createBrowserRouter([
@@ -112,8 +114,25 @@ const MainRouter = createBrowserRouter([
     path: "/setlocalstorage",
     element: (
       <>
-        {/* <HeaderFile /> */}
+        <HeaderFile />
         <SetStorage />
+      </>
+    )
+  },
+  {
+    path: "admindashboard",
+    element: (
+      <>
+        <Admindashboard />
+      </>
+    )
+  },
+  {
+    path: "cookieex",
+    element: (
+      <>
+        <HeaderFile />
+        <Cookieex />
       </>
     )
   }

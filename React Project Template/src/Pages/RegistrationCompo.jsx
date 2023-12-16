@@ -11,7 +11,7 @@ const RegistrationCompo = () => {
     //     // setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
     // }
     const savedata = () => {
-        if (!inp.uname || !inp.uemail || !inp.upass || !inp.umobile) {
+        if (!inp.uname || !inp.uemail || !inp.password || !inp.umobile) {
             setMessage("please enter all fields")
         }
         else {
@@ -55,8 +55,8 @@ const RegistrationCompo = () => {
                                     </div>
                                     <div className="row mt-3">
                                         <div className="col">
-                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="upass" required />
-                                            {errors.upassError ? <span>This field is required</span> : ""}
+                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="password" required />
+                                            {errors.passwordError ? <span>This field is required</span> : ""}
                                         </div>
 
                                     </div>

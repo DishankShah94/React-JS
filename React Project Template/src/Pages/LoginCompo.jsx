@@ -13,7 +13,7 @@ const LoginCompo = () => {
     const navigate = useNavigate();
     const login = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/users?email=${inp.uname}&password=${inp.upass}`)
+        fetch(`http://localhost:5000/users?uname=${inp.uname}&password=${inp.password}`)
             // fetch(`http://localhost:5000/users?`)
             .then((res) => res.json())
             .then((data) => {
@@ -28,9 +28,10 @@ const LoginCompo = () => {
                     console.log(data[0].role);
                     setLoginError(false)
                     if (data[0].role == 1) {
-                        navigate('/admindahsboard')
+                        navigate('/admindashboard')
                     } else {
-                        navigate('/about')
+                        // setLoginError(true)
+                        navigate('/')
                     }
                 } else {
                     setLoginError(true)
@@ -74,8 +75,8 @@ const LoginCompo = () => {
                                         <div className="col">
 
                                             {/* <label>Password </label> */}
-                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="upass" required />
-                                            {errors.upassError ? <span>This field is required</span> : ""}
+                                            <input className='form-control' placeholder='Enter your Password' type="password" onChange={handleChange} onBlur={handleChange} name="password" required />
+                                            {errors.passwordError ? <span>This field is required</span> : ""}
                                         </div>
 
                                     </div>
@@ -94,6 +95,7 @@ const LoginCompo = () => {
                                         <Link to="/signup">Click here to create new account</Link>
                                     </div>
                                 </div>
+                                {loginError ? <p className='alert alert-danger'>Invalid user</p> : ""}
                             </div>
                         </div>
 
