@@ -26,60 +26,82 @@ const HeaderFie = () => {
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <a className="navbar-brand" href="index.html">
-                        <i className="far fa-gem"></i>Jewel</a>
-                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className="navbar-nav">
-                            <li className="nav-item active">
-                                {/* <a className="nav-link cool" href="index.html">Home
+                    <div className="row w-100 ">
+                        <div className="col align-self">
+                            <a className="navbar-brand" href="index.html"> <i className="far fa-gem"></i>Jewel</a>
+
+                        </div>
+                        <div className="col align-self">
+                            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul className="navbar-nav align-items-center">
+                                    <li className="nav-item active">
+                                        {/* <a className="nav-link cool" href="/">Home
                                     <span className="sr-only">(current)</span>
                                 </a> */}
-                                <Link className="nav-link cool" to="/">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                {/* <a className="nav-link cool" href="about.html">About</a> */}
-                                <Link className="nav-link " to="/about">About</Link>
+                                        <Link className="nav-link cool" to="/">Home</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link " to="/about">About</Link>
+                                        {/* <a className="nav-link cool" href="about.html">About</a> */}
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link " to="/contact">Contact</Link>
+                                        {/* <a className="nav-link cool" href="price.html">Pricing</a> */}
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link " to="/productapi">Products</Link>
+                                        {/* <a className="nav-link cool" href="price.html">Pricing</a> */}
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link " to="/seatSelector">Seat Booking</Link>
+                                        {/* <a className="nav-link cool" href="price.html">Pricing</a> */}
+                                    </li>
 
-                            </li>
-                            <li className="nav-item">
-                                {/* <a className="nav-link cool" href="price.html">Pricing</a> */}
-                                <Link className="nav-link " to="/contact">Contact</Link>
-                            </li>
-
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle cool" onClick={() => { setShowBasic(!showBasic) }} href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Dropdown
-                                    <i className="fas fa-angle-down"></i>
-                                </a>
-                                <div className={showBasic ? "dropdown-menu display-block" : "dropdown-menu"} aria-labelledby="navbarDropdownMenuLink">
-                                    {/* {showBasic ? <>
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle cool" onClick={() => { setShowBasic(!showBasic) }} href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Dropdown
+                                            <i className="fas fa-angle-down"></i>
+                                        </a>
+                                        <div className={showBasic ? "dropdown-menu d-block" : "dropdown-menu"} aria-labelledby="navbarDropdownMenuLink">
+                                            {/* {showBasic ? <>
                                         <Link className="dropdown-item" to="/login" onClick={() => { setShowBasic(!showBasic) }}>Signin</Link>
 
                                     </> : <>
                                         <Link className="dropdown-item" to="/logout" onClick={() => { setShowBasic(!showBasic) }}>Logout</Link>
 
                                     </>} */}
-                                    <Link className="dropdown-item" to="/login" onClick={() => { setShowBasic(!showBasic) }}>Signin</Link>
-                                    <Link className="dropdown-item" to="/setlocalstorage" onClick={() => { setShowBasic(!showBasic) }}>Local Storage</Link>
-                                    <Link className="dropdown-item" to="/cookieex" onClick={() => { setShowBasic(!showBasic) }}>Cookie</Link>
+                                            <Link className="dropdown-item" to="/login" onClick={() => { setShowBasic(!showBasic) }}>Signin</Link>
+                                            <Link className="dropdown-item" to="/setlocalstorage" onClick={() => { setShowBasic(!showBasic) }}>Local Storage</Link>
+                                            <Link className="dropdown-item" to="/cookieex" onClick={() => { setShowBasic(!showBasic) }}>Cookie</Link>
 
-                                    {/* <a className="dropdown-item" href="404.html">404</a> */}
-                                    {/* <div className="dropdown-divider"></div>     */}
-                                    {/* <a className="dropdown-item" href="soon.html">Comingsoon</a> */}
+                                            {/* <a className="dropdown-item" href="404.html">404</a> */}
+                                            {/* <div className="dropdown-divider"></div>     */}
+                                            {/* <a className="dropdown-item" href="soon.html">Comingsoon</a> */}
 
-                                </div>
-                            </li>
-                            <li className="nav-item">
-                                {/* <a className="nav-link cool" href="about.html">About</a> */}
-                                <Link className="nav-link " to="/productapi">Product Api</Link>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col align-self ml-5">
+                            <div className="header-search-agileits-w3ls">
+                                <form action="#" method="post">
+                                    <div className="search">
+                                        <input className="form-control" type="search" placeholder="Search here..." name="Search" required="" />
+                                    </div>
 
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/seatSelector">Seat Selector</Link>
-                            </li>
-                        </ul>
+                                    <div className="sear-sub">
+                                        <button className="btn btn1">
+                                            <i className="fas fa-search"></i>
+                                        </button>
 
+                                    </div>
+                                    <div className="clearfix"></div>
+                                </form>
+                            </div>
+
+                        </div>
                     </div>
                     {/* <div className="header-search-agileits-w3ls">
                             <form action="#" method="post">

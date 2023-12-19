@@ -28,7 +28,7 @@ const LoginCompo = () => {
                     console.log(data[0].role);
                     setLoginError(false)
                     if (data[0].role == 1) {
-                        navigate('/admindashboard')
+                        navigate('/admin')
                     } else {
                         // setLoginError(true)
                         navigate('/')

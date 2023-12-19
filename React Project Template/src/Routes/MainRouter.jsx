@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 // import { Link } from "react-router-dom";
 import HeaderFile from "../Component/HeaderFile";
@@ -17,7 +17,7 @@ import SetStorage from "../Pages/SetStorage.jsx";
 import Admindashboard from "../Pages/Admindashboard.jsx";
 import Cookieex from "../Pages/Cookie.jsx";
 
-
+const AdminRoute = React.lazy(() => { return import('./AdminRouter.jsx') });
 const MainRouter = createBrowserRouter([
   {
     path: "/",
@@ -135,6 +135,16 @@ const MainRouter = createBrowserRouter([
         <Cookieex />
       </>
     )
+  },
+  {
+    path: "/admin/*",
+    element: <><Suspense fallback={<h2>Loading...</h2>}> <AdminRoute /></Suspense></>,
+    // children: [
+    //     {
+    //         path: "classcompo/*",
+    //         element: <Suspense fallback={<h2>Loading...</h2>}> <ClassCompoRoute /></Suspense>,
+    //     }
+    // ]
   }
 ]);
 export default MainRouter;
