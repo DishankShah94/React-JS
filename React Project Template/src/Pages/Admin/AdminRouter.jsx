@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import AdminDashboard from './AdminDashboard.jsx';
 import AdminMainPage from './AdminMainPage.jsx';
 import AdminAllUsers from './AdminAllUsers.jsx';
-import Edituser from './Edituser';
 
 class ClassCompoRouter extends Component {
     render() {

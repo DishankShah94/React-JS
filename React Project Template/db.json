@@ -2,14 +2,14 @@
   "users": [
     {
       "uname": "admin",
-      "email": "admin@mail.com",
+      "uemail": "admin@mail.com",
       "password": "123",
       "umobile": "7845784513",
       "id": 1,
       "role": "1"
     },
     {
-      "uname": "Dishu",
+      "uname": "Dishu Shah",
       "uemail": "dishu@gmail.com",
       "password": "dishu",
       "umobile": "7845784512",
