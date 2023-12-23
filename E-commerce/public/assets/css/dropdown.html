@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+
+            --c-white: #fff;
+
+            --c-black: #1E2235;
+
+            --c-bg: #f0edff;
+
+            --c-dark-indigo: #6956b9;
+
+            --c-low-indigo: #e1dbfe;
+
+        }
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            scroll-behavior: smooth;
+
+            box-sizing: border-box;
+
+            font-family: sans-serif;
+
+        }
+
+        /* body {
+
+            background: var(--c-bg);
+
+            min-height: 100%;
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+        } */
+
+
+        /*Filter options selector start*/
+
+        .select-btn {
+
+            width: 150px;
+
+            display: flex;
+
+            overflow: hidden;
+
+            /* background: var(--c-low-indigo); */
+
+            color: var(--c-black);
+
+            padding: 20px;
+
+            /* margin-top: 3rem; */
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            border-radius: 8px;
+
+            align-items: center;
+
+            cursor: pointer;
+
+            justify-content: space-between;
+
+        }
+
+        .select-menu .select-btn .sBtn-text {
+
+            font-weight: 430;
+
+        }
+
+        .options {
+
+            position: absolute;
+
+            width: 300px;
+
+            color: var(--c-black);
+
+            overflow: auto;
+
+            max-height: 350px;
+
+            padding: 10px;
+
+            margin-top: 10px;
+
+            border-radius: 8px;
+
+            background: var(--c-white);
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            display: none;
+
+            animation: fadeInDown 0.35s both;
+
+        }
+
+        .options::-webkit-scrollbar {
+
+            display: none;
+
+        }
+
+        .options .option {
+
+            display: flex;
+
+            height: 55px;
+
+            cursor: pointer;
+
+            font-weight: 400;
+
+            padding: 0 16px;
+
+            border-radius: 8px;
+
+            align-items: center;
+
+            background: var(--c-white);
+
+        }
+
+        .options .option:hover {
+
+            background: #f2f2f2;
+
+        }
+
+        .options .option .option-text {
+
+            font-size: 18px;
+
+            color: #333;
+
+        }
+
+        .select-btn span i {
+            height: 24px;
+
+            width: 24px;
+
+            transition: 0.2s;
+
+            color: var(--c-dark-indigo);
+
+        }
+
+        .active .select-btn svg {
+
+            transform: rotate(180deg);
+
+        }
+
+        .active .options {
+            display: block;
+
+            opacity: 0;
+
+            z-index: 10;
+
+            animation: fadeInUp 0.4s both;
+
+        }
+
+        .sBtn-text img {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /*Animation for options box fade up-down*/
+
+        @keyframes fadeInUp {
+
+            from {
+
+                transform: translate3d(0, 30px, 0);
+
+            }
+
+            to {
+
+                transform: translate3d(0, 0, 0);
+
+                opacity: 1;
+
+            }
+
+        }
+
+        @keyframes fadeInDown {
+
+            from {
+
+                transform: translate3d(0, 0, 0);
+
+                opacity: 1;
+
+            }
+
+            to {
+
+                transform: translate3d(0, 20px, 0);
+
+                opacity: 0;
+
+            }
+
+        }
+
+        /*Filter options selector end*/
+    </style>
+</head>
+
+<body>
+    <!--Filter options selector start-->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima quibusdam vel delectus. Ex hic iusto,
+        mollitia asperiores molestias aspernatur autem, sit quo alias, voluptates natus nisi! Placeat, ad ex?</p>
+    <div class="filter-box">
+
+        <div class="select-menu">
+
+            <div class="select-btn">
+
+                <span class="sBtn-text"><img src="../images/profile.jpg" alt=""></span>
+
+                <svg role="img" viewBox="0 0 512 512">
+
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+
+                </svg>
+
+            </div>
+
+            <ul class="options">
+
+                <li class="option">
+
+                    <span class="option-text"><a href="../images/banner-img-1.png">banner image</a></span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Action</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Drama</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Adventure</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Horror</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Game</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Comedy</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Mystery</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Sci-fi</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">90s</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Bollywood</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Hollywood</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Action</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Adventure</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Drama</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Retro</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Futuristic</span>
+
+                </li>
+
+                <li class="option">
+
+                    <span class="option-text">Horror</span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam minima quibusdam vel delectus. Ex hic iusto,
+
+
+        <!--Filter options selector end-->
+        <script>
+
+            var optionMenu = document.querySelector(".select-menu"),
+                selectBtn = optionMenu.querySelector(".select-btn"),
+                options = optionMenu.querySelectorAll(".option"),
+                sBtn_text = optionMenu.querySelector(".sBtn-text");
+            selectBtn.addEventListener("click", () =>
+                optionMenu.classList.toggle("active")
+            );
+
+            options.forEach((option) => {
+                option.addEventListener("click", () => {
+                    let selectedOption = option.querySelector(".option-text").innerText;
+                    sBtn_text.innerText = selectedOption;
+                    optionMenu.classList.remove("active");
+                });
+            });
+        </script>
+</body>
+
+</html>
