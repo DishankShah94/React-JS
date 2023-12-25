@@ -62,7 +62,7 @@ const MainRouter = createBrowserRouter([
     path: "/logout",
     element: (
       <>
-        <HeaderFile />
+        {/* <HeaderFile /> */}
         <Logout />
       </>
     )

@@ -22,7 +22,7 @@ export default function HeaderCompo() {
   const menuItems = {
     "/home": "Home",
     "/about": "About us",
-    "/contact": "Contact Us",
+    "/contact": "Contact Us"
   };
   const DynamicMenuData = Object.entries(menuItems).map(([key, value], i) => {
     return (
