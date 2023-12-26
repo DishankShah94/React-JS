@@ -16,6 +16,8 @@ import Logout from "../Pages/Logout.jsx";
 import SetStorage from "../Pages/SetStorage.jsx";
 import Admindashboard from "../Pages/Admindashboard.jsx";
 import Cookieex from "../Pages/Cookie.jsx";
+import FormikLogin from "../Pages/FormikLogin.jsx";
+import EmailSent from "../Pages/EmailSent.jsx";
 
 const AdminRoute = React.lazy(() => { return import('./AdminRouter.jsx') });
 const MainRouter = createBrowserRouter([
@@ -73,6 +75,22 @@ const MainRouter = createBrowserRouter([
       <>
         <HeaderFile />
         <RegistrationCompo />
+      </>
+    )
+  },
+  {
+    path: "/emailsent",
+    element: (<>
+      <HeaderFile />
+      <EmailSent />
+    </>)
+  },
+  {
+    path: "/formik",
+    element: (
+      <>
+        <HeaderFile />
+        <FormikLogin />
       </>
     )
   },

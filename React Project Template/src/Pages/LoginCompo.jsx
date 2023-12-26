@@ -30,7 +30,7 @@ const LoginCompo = () => {
                 if (data.length > 0) {
                     console.log(data[0].role);
                     setLoginError(false)
-                    setCookies('loggedin','active');
+                    setCookies('loggedin', 'active');
                     if (data[0].role == 1) {
                         setCookies('admin', 'true');
                         navigate('/admin')
