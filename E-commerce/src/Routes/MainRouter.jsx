@@ -4,6 +4,8 @@ import SpcialOffers from "../Component/SpecialOffers";
 import AllProduct from "../Pages/AllProduct";
 import ProductDetails from "../Pages/ProductDetails";
 import Footer from "../Pages/Footer";
+import Chairs from "../Pages/Chairs";
+import Login from "../Component/Login";
 const MainRouter = createBrowserRouter([
     {
         path: "/",
@@ -11,18 +13,35 @@ const MainRouter = createBrowserRouter([
             <>
                 <Header />
                 <SpcialOffers />
+                <AllProduct />
                 <Footer />
             </>
         ),
     },
+    // {
+    //     path: "/allProduct",
+    //     element: (
+    //         <>
+    //             <Header />
+    //             <AllProduct />
+    //         </>
+    //     ),
+    // },
     {
-        path: "/allProduct",
+        path: "/login",
+        element: (<>
+            <Header />
+            <Login />
+        </>)
+    },
+    {
+        path: "/chair",
         element: (
             <>
                 <Header />
-                <AllProduct />
+                <Chairs />
             </>
-        ),
+        )
     },
     {
         path: "/productsdetails/:id",
@@ -31,7 +50,6 @@ const MainRouter = createBrowserRouter([
             <ProductDetails />
         </>)
     },
-
 
 ]);
 

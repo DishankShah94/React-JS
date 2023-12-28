@@ -32,16 +32,17 @@ const SpcialOffers = () => {
                     </div>
                 </MDBCol>
             </MDBRow>
+        </MDBContainer>
+        <MDBContainer>
             <MDBRow>
-                <MDBCol size="6" lg="12">
+                <MDBCol size="6" lg="12" md="12" sm="12">
 
-                    <Link to="./allProduct" className='back-color text-black px-3 py-2 square rounded-3'>All Product</Link>
-                    <Link to="./allProduct" className='back-color text-black mx-2 px-3 py-2 square rounded-3'>All Product</Link>
-                    <Link to="./allProduct" className='back-color text-black mx-2 px-3 py-2 square rounded-3'>All Product</Link>
-                    <Link to="./allProduct" className='back-color text-black mx-2 px-3 py-2 square rounded-3'>All Product</Link>
-                    <Link to="./allProduct" className='back-color text-black mx-2 px-3 py-2 square rounded-3'>All Product</Link>
-
-
+                    <Link to="/" className='back-color text-black px-3 py-2 square rounded-3'>All Product</Link>
+                    <Link to="/chair" className='text-black  categories mx-2 px-3 py-2 square rounded-3'>Chair</Link>
+                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Sofa</Link>
+                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Stool</Link>
+                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Footstool</Link>
+                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Office</Link>
                 </MDBCol>
             </MDBRow>
         </MDBContainer>

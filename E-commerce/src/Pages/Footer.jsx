@@ -5,11 +5,11 @@ const Footer = () => {
     return (<>
         <footer>
             <MDBContainer>
-                <MDBRow >
+                <MDBRow>
                     <MDBCol>
-                        <div class="footer_text">
-                            <h4 class="txt_cap">sort by type</h4>
-                            <ul class="txt_cap">
+                        <div className="footer_text">
+                            <h4 className="txt_cap">sort by type</h4>
+                            <ul className="txt_cap">
                                 <li><a href="#">about us</a></li>
                                 <li><a href="#">corporate governance</a></li>
                                 <li><a href="#">imported material</a></li>
@@ -18,9 +18,9 @@ const Footer = () => {
                         </div>
                     </MDBCol>
                     <MDBCol>
-                        <div class="footer_text">
-                            <h4 class="txt_cap">sort by type</h4>
-                            <ul class="txt_cap">
+                        <div className="footer_text">
+                            <h4 className="txt_cap">sort by type</h4>
+                            <ul className="txt_cap">
                                 <li><a href="#">about us</a></li>
                                 <li><a href="#">corporate governance</a></li>
                                 <li><a href="#">imported material</a></li>
@@ -29,9 +29,9 @@ const Footer = () => {
                         </div>
                     </MDBCol>
                     <MDBCol>
-                        <div class="footer_text">
-                            <h4 class="txt_cap">sort by type</h4>
-                            <ul class="txt_cap">
+                        <div className="footer_text">
+                            <h4 className="txt_cap">sort by type</h4>
+                            <ul className="txt_cap">
                                 <li><a href="#">about us</a></li>
                                 <li><a href="#">corporate governance</a></li>
                                 <li><a href="#">imported material</a></li>
@@ -40,9 +40,9 @@ const Footer = () => {
                         </div>
                     </MDBCol>
                     <MDBCol>
-                        <div class="footer_text">
-                            <h4 class="txt_cap">sort by type</h4>
-                            <ul class="txt_cap">
+                        <div className="footer_text">
+                            <h4 className="txt_cap">sort by type</h4>
+                            <ul className="txt_cap">
                                 <li><a href="#">about us</a></li>
                                 <li><a href="#">corporate governance</a></li>
                                 <li><a href="#">imported material</a></li>
@@ -51,15 +51,15 @@ const Footer = () => {
                         </div>
                     </MDBCol>
                     <MDBCol>
-                        <div class="footer_text">
-                            <h4 class="txt_cap">download our app</h4>
+                        <div className="footer_text">
+                            <h4 className="txt_cap">download our app</h4>
                             <ul>
                                 <li>
-                                    <a class="download_btn align_center txt_cap justify_center" href="#">
-                                        <div class="download_logo">
-                                            <i class="fa-brands fa-3x fa-apple"></i>
+                                    <a className="download_btn align_center txt_cap justify_center" href="#">
+                                        <div className="download_logo">
+                                            <i className="fa-brands fa-3x fa-apple"></i>
                                         </div>
-                                        <div class="download_txt">
+                                        <div className="download_txt">
                                             <p>download on the</p>
                                             <h5>apple store</h5>
                                         </div>
@@ -67,8 +67,8 @@ const Footer = () => {
                                 </li>
 
                                 <li>
-                                    <a class="download_btn align_center txt_cap justify_center" href="#">
-                                        <div class="download_logo">
+                                    <a className="download_btn align_center txt_cap justify_center" href="#">
+                                        <div className="download_logo">
                                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="45" height="45"
                                                 viewBox="0 0 45 45">
                                                 <linearGradient id="jFdG-76_seIEvf-hbjSsaa_rZwnRdJyYqRi_gr1" x1="1688.489"
@@ -117,7 +117,7 @@ const Footer = () => {
                                                     clip-rule="evenodd"></path>
                                             </svg>
                                         </div>
-                                        <div class="download_txt">
+                                        <div className="download_txt">
                                             <p>get it on</p>
                                             <h5>play store</h5>
                                         </div>
@@ -129,8 +129,8 @@ const Footer = () => {
                 </MDBRow>
                 <MDBRow>
                     <MDBCol lg='4'>
-                        <div class="footer_text footer_text_2">
-                            <h3 class="txt_cap">Popular Categories</h3>
+                        <div className="footer_text footer_text_2">
+                            <h3 className="txt_cap">Popular Categories</h3>
                             <ul>
                                 <li><a href="#">Sofas,Sectional Sofas,Sofa Sets,Queen Size Beds</a></li>
                                 <li><a href="#">Sofas,Sectional Sofas,Sofa Sets,Queen Size Beds</a></li>
@@ -139,10 +139,11 @@ const Footer = () => {
                                 <li><a href="#">Sofas,Sectional Sofas,Sofa Sets,Queen Size Beds</a></li>
                                 <li><a href="#">Sofas,Sectional Sofas,Sofa Sets,Queen Size Beds</a></li>
                             </ul>
-                        </div>                </MDBCol>
+                        </div>                
+                        </MDBCol>
                     <MDBCol lg='4'>
-                        <div class="footer_text footer_text_2">
-                            <h3 class="txt_cap">Popular Categories</h3>
+                        <div className="footer_text footer_text_2">
+                            <h3 className="txt_cap">Popular Categories</h3>
                             <ul>
                                 <li><a href="#">Mintwud,Woodsworth,CasaCraftAmberville,</a></li>
                                 <li><a href="#">Mudramark,Bohemiana,Clouddio,Spacewood,</a></li>
@@ -154,8 +155,8 @@ const Footer = () => {
                         </div>
                     </MDBCol>
                     <MDBCol lg='4'>
-                        <div class="footer_text footer_text_2">
-                            <h3 class="txt_cap">Popular Categories</h3>
+                        <div className="footer_text footer_text_2">
+                            <h3 className="txt_cap">Popular Categories</h3>
                             <ul>
                                 <li><a href="#">Bengaluru,Mumbai,Navi Mumbai,Delhi,Hyderabad,</a></li>
                                 <li><a href="#">Chennai,Gurgaon,Kolkata,Noida,Goa,Ghaziabad,Faridabad,</a></li>
