@@ -6,6 +6,8 @@ import ProductDetails from "../Pages/ProductDetails";
 import Footer from "../Pages/Footer";
 import Chairs from "../Pages/Chairs";
 import Login from "../Component/Login";
+import Admin from "../Pages/Admin";
+import Card from "../Pages/Card";
 const MainRouter = createBrowserRouter([
     {
         path: "/",
@@ -42,6 +44,19 @@ const MainRouter = createBrowserRouter([
                 <Chairs />
             </>
         )
+    },
+    {
+        path: "/admin",
+        element: (<>
+            <Admin />
+        </>)
+    },
+    {
+        path: "/card",
+        element: (<>
+            <Header />
+            <Card />
+        </>)
     },
     {
         path: "/productsdetails/:id",

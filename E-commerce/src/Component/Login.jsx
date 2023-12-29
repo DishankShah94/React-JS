@@ -1,20 +1,24 @@
-import { useState } from 'react';
-import '../Component/assests/login.css';
-import CustomHook from './CustomHook';
-import CustomHook2 from './CustomHook2';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import '../Component/assests/login.css'
+
+import { useNavigate } from "react-router-dom";
+import CustomHook1 from "./Hooks/CustomHook";
+import CustomHook2 from "./Hooks/CustomHook2";
+
 const Login = () => {
     const [state, setState] = useState(true)
     const [remove, setRemove] = useState()
     const [loginError, setLoginError] = useState(false)
-    const [message, setMessage] = useState('');
     const navigate = useNavigate();
-    const { handleChange1, inp1, setInp1, error1, resetForm1 } = CustomHook({ "role": "1", "name1": "", "password1": "" }, {})
-    const { handleChange2, inp2, setInp2, error2, resetForm2 } = CustomHook2({ "role": "2", "name": "", "password": "", "email": "" }, {})
-    const data = (e) => {
-        e.preventDefault();
+
+    const data = () => {
         setState(!state)
     }
+    const { handleChange1, inp1, setInp1, error1, resetForm1 } = CustomHook1({ "role": "1", "name1": "", "password1": "" }, {})
+    const { handleChange2, inp2, setInp2, error2, resetForm2 } = CustomHook2({ "role": "2", "name": "", "password": "", "email": "" }, {})
+
+    const [message, setMessage] = useState('');
+
     const Submit1 = (event) => {
         event.preventDefault();
         // if (!inp1.name1 || !inp1.password1) {
@@ -25,35 +29,7 @@ const Login = () => {
 
 
     }
-    const savedata1 = () => {
-        fetch(`http://localhost:5000/users?name1=${inp1.name}&password1=${inp1.password}`)
-            .then((res) => { return res.json() })
-            .then((response) => {
-                console.log(response.length);
-                if (response.length > 0) {
-                    console.log(response[0].role);
 
-                    // setCookie('loggedin', "active");
-
-                    if (response[0].role === 1) {
-                        // setCookie('admin', "true");
-                        // navigate("/admin")
-                        // resetForm1()
-                        console.log("dddd");
-                    } else {
-                        // navigate("/")
-                        // resetForm1()
-                        console.log("vvvv");
-                    }
-                } else {
-                    // setLoginError(true)
-                    console.log("called");
-                }
-            }).catch((error) => {
-                // setServerError(true)
-            })
-
-    }
     const Submit2 = (event) => {
         event.preventDefault();
         if (!inp2.name || !inp2.password || !inp2.email) {
@@ -63,11 +39,31 @@ const Login = () => {
             // Add your login logic here
         }
     }
+
+    const savedata1 = () => {
+        fetch(`http://localhost:5000/users?name=${inp1.name1}&password=${inp1.password1}`)
+            .then((res) => res.json())
+            .then((response) => {
+                if (response.length > 0) {
+                    if (response[0].role === "1") {
+                        navigate("/admin");
+                    } else {
+                        console.log("Regular user login");
+                    }
+                } else {
+                    console.log("User not found");
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                // Handle error
+            });
+    }
     const savedata = (e) => {
         if (!inp2.name || !inp2.password || !inp2.email) {
             setMessage("This field is required")
         } else {
-            fetch(' http://localhost:5000/users', {
+            fetch('http://localhost:5000/users', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",  // sent request
@@ -148,9 +144,7 @@ const Login = () => {
                     </form>
                 </>}
             </div>
-        </section >
+        </section>
     </>);
 }
-
-
 export default Login;

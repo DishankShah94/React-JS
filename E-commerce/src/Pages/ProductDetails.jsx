@@ -240,7 +240,7 @@ const ProductDetails = () => {
                         {/* <i class="fa-solid fa-chevron-right"></i> */}
                     </div>
                     <div className="checkout">
-                        <Link to="/login">  <p>proceed to checkout</p></Link>
+                        <Link to="/card">  <p>proceed to checkout</p></Link>
                     </div>
                 </MDBCol>
 
