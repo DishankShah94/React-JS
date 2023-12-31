@@ -1,4 +1,8 @@
-const Admindashboard = () => {
+import { Link } from "react-router-dom";
+import { LineChart } from "./LineChart";
+import { BarChart } from "./BarChart";
+
+const Admin = () => {
     return (<>
         <header className="app-header fixed-top">
             <div className="app-header-inner">
@@ -49,7 +53,7 @@ const Admindashboard = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a className="link-mask" href="notifications.html"></a>
+                                                <a className="link-mask" href=""></a>
                                             </div>
                                             <div className="item p-3">
                                                 <div className="row gx-2 justify-content-between align-items-center">
@@ -68,7 +72,7 @@ const Admindashboard = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a className="link-mask" href="notifications.html"></a>
+                                                <a className="link-mask" href=""></a>
                                             </div>
                                             <div className="item p-3">
                                                 <div className="row gx-2 justify-content-between align-items-center">
@@ -86,7 +90,7 @@ const Admindashboard = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a className="link-mask" href="notifications.html"></a>
+                                                <a className="link-mask" href=""></a>
                                             </div>
                                             <div className="item p-3">
                                                 <div className="row gx-2 justify-content-between align-items-center">
@@ -100,7 +104,7 @@ const Admindashboard = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a className="link-mask" href="notifications.html"></a>
+                                                <a className="link-mask" href=""></a>
                                             </div>
                                         </div>
 
@@ -111,7 +115,7 @@ const Admindashboard = () => {
                                     </div>
                                 </div>
                                 <div className="app-utility-item">
-                                    <a href="settings.html" title="Settings">
+                                    <a href="" title="Settings">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-gear icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z" />
                                             <path fill-rule="evenodd" d="M8 5.754a2.246 2.246 0 1 0 0 4.492 2.246 2.246 0 0 0 0-4.492zM4.754 8a3.246 3.246 0 1 1 6.492 0 3.246 3.246 0 0 1-6.492 0z" />
@@ -120,7 +124,7 @@ const Admindashboard = () => {
                                 </div>
 
                                 <div className="app-utility-item app-user-dropdown dropdown">
-                                    <a className="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile" /></a>
+                                    {/* <a className="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile" /></a> */}
                                     <ul className="dropdown-menu" aria-labelledby="user-dropdown-toggle">
                                         <li><a className="dropdown-item" href="account.html">Account</a></li>
                                         <li><a className="dropdown-item" href="settings.html">Settings</a></li>
@@ -138,10 +142,8 @@ const Admindashboard = () => {
                 <div className="sidepanel-inner d-flex flex-column">
                     <a href="#" id="sidepanel-close" className="sidepanel-close d-xl-none">&times;</a>
                     <div className="app-branding">
-                        <a className="app-logo" href="index.html"><img className="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo" /><span className="logo-text">PORTAL</span></a>
-
+                        <Link className="app-logo" to="/"><span className="logo-text">Home</span></Link>
                     </div>
-
                     <nav id="app-nav-main" className="app-nav app-nav-main flex-grow-1">
                         <ul className="app-menu list-unstyled accordion" id="menu-accordion">
                             <li className="nav-item">
@@ -300,30 +302,6 @@ const Admindashboard = () => {
                 <div className="container-xl">
 
                     <h1 className="app-page-title">Overview</h1>
-
-                    <div className="app-card alert alert-dismissible shadow-sm mb-4 border-left-decoration" role="alert">
-                        <div className="inner">
-                            <div className="app-card-body p-3 p-lg-4">
-                                <h3 className="mb-3">Welcome, developer!</h3>
-                                <div className="row gx-5 gy-3">
-                                    <div className="col-12 col-lg-9">
-
-                                        <div>Portal is a free Bootstrap 5 admin dashboard template. The design is simple, clean and modular so it's a great base for building any modern web app.</div>
-                                    </div>
-                                    <div className="col-12 col-lg-3">
-                                        <a className="btn app-btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/admin-dashboard/portal-free-bootstrap-admin-dashboard-template-for-developers/"><svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-file-earmark-arrow-down me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 0h5.5v1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" />
-                                            <path d="M9.5 3V0L14 4.5h-3A1.5 1.5 0 0 1 9.5 3z" />
-                                            <path fill-rule="evenodd" d="M8 6a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 10.293V6.5A.5.5 0 0 1 8 6z" />
-                                        </svg>Free Download</a>
-                                    </div>
-                                </div>
-                                <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-
-                        </div>
-                    </div>
-
                     <div className="row g-4 mb-4">
                         <div className="col-6 col-lg-3">
                             <div className="app-card app-card-stat shadow-sm h-100">
@@ -391,15 +369,9 @@ const Admindashboard = () => {
                                 </div>
                                 <div className="app-card-body p-3 p-lg-4">
                                     <div className="mb-3 d-flex">
-                                        <select className="form-select form-select-sm ms-auto d-inline-flex w-auto">
-                                            <option value="1" selected>This week</option>
-                                            <option value="2">Today</option>
-                                            <option value="3">This Month</option>
-                                            <option value="3">This Year</option>
-                                        </select>
                                     </div>
                                     <div className="chart-container">
-                                        <canvas id="canvas-linechart" ></canvas>
+                                        <LineChart />
                                     </div>
                                 </div>
                             </div>
@@ -420,15 +392,10 @@ const Admindashboard = () => {
                                 </div>
                                 <div className="app-card-body p-3 p-lg-4">
                                     <div className="mb-3 d-flex">
-                                        <select className="form-select form-select-sm ms-auto d-inline-flex w-auto">
-                                            <option value="1" selected>This week</option>
-                                            <option value="2">Today</option>
-                                            <option value="3">This Month</option>
-                                            <option value="3">This Year</option>
-                                        </select>
+
                                     </div>
                                     <div className="chart-container">
-                                        <canvas id="canvas-barchart" ></canvas>
+                                        <BarChart />
                                     </div>
                                 </div>
                             </div>
@@ -688,4 +655,4 @@ const Admindashboard = () => {
     </>);
 }
 
-export default Admindashboard;
+export default Admin;

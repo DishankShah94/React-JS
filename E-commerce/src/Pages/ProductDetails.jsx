@@ -2,7 +2,7 @@ import { MDBCard, MDBCardImage, MDBCol, MDBCardBody, MDBCardTitle, MDBCardText, 
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../Component/assests/ProductDetails.css";
-const ProductDetails = () => {
+const ProductDetails = ({ updateValues }) => {
     const [productDetails, setProductDetails] = useState();
     let { id } = useParams();
     const [value, setValue] = useState("1");
@@ -57,7 +57,6 @@ const ProductDetails = () => {
             if (!responseBody.trim()) {
                 throw new Error('Empty response body');
             }
-
             const productData = JSON.parse(responseBody);
             const imgBasePath = `http://localhost:5000/${productData.image}`;
             productData.image = imgBasePath;
@@ -240,7 +239,9 @@ const ProductDetails = () => {
                         {/* <i class="fa-solid fa-chevron-right"></i> */}
                     </div>
                     <div className="checkout">
-                        <Link to="/card">  <p>proceed to checkout</p></Link>
+                        <Link to={`/card/${id}`} state={{ productDetails, value, finalAmount, discount }}>
+                            <p>proceed to checkout</p>
+                        </Link>
                     </div>
                 </MDBCol>
 
