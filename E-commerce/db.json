@@ -267,6 +267,19 @@
       "email": "nilesh@gmail.com",
       "id": 9
     }
+  ],
+  "cart": [
+    {
+      "value": "1",
+      "finalAmount": 19800,
+      "discount": 2200,
+      "id": 1
+    },
+    {
+      "value": "3",
+      "finalAmount": 59400,
+      "discount": 6600,
+      "id": 2
+    }
   ]
-  
 }

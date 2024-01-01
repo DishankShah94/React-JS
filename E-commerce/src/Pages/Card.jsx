@@ -22,8 +22,8 @@ const Card = () => {
                 throw new Error('Empty response body');
             }
             const productData = JSON.parse(responseBody);
-            const imgBasePath = `http://localhost:5000/${productData.image}`;
-            productData.image = imgBasePath;
+            // const imgBasePath = `http://localhost:5000/${productData.image}`;
+            // productData.image = imgBasePath;
         } catch (error) {
             console.error('Error fetching product details:', error);
         }
@@ -33,7 +33,7 @@ const Card = () => {
     }, []);
     return (<>
         <MDBContainer>
-            <MDBRow className="m-3">
+            <MDBRow className="m-3 square border">
                 <MDBCol lg={6} className="d-flex align-center">
                     <img
                         src={productDetails.image}
@@ -55,10 +55,7 @@ const Card = () => {
                             <h3 className="txt_cap">cart total price</h3>
                             <h3>&#8377;{finalAmount}</h3>
                         </div>
-                        <div className="d-flex justify-content-between">
-                            <h3 className="txt_cap">items in cart</h3>
-                            <h3>{value}</h3>
-                        </div>
+
 
                         <div className="d-flex justify-content-between">
                             <h3 className="txt_cap">cart total price</h3>

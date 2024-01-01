@@ -2,7 +2,8 @@ import { MDBCard, MDBCardImage, MDBCol, MDBCardBody, MDBCardTitle, MDBCardText, 
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../Component/assests/ProductDetails.css";
-const ProductDetails = ({ updateValues }) => {
+import CustomHookAllProduct from "../Component/Hooks/CustomHookAllProduct";
+const ProductDetails = () => {
     const [productDetails, setProductDetails] = useState();
     let { id } = useParams();
     const [value, setValue] = useState("1");
@@ -10,6 +11,7 @@ const ProductDetails = ({ updateValues }) => {
     const [amount, setAmount] = useState(1);
     const [discount, setDiscount] = useState(0);
     const [finalAmount, setFinalAmount] = useState(0);
+    const { handleInputChange, inp, setInp } = CustomHookAllProduct({ value: "", finalAmount: "", discount: "" }, {})
     // console.log(productId);
     const data = async (productId, selectedValue) => {
         const res = await fetch(`http://localhost:5000/allProducts/${productId}`);
@@ -73,6 +75,32 @@ const ProductDetails = ({ updateValues }) => {
     if (!productDetails) {
         return <p>Loading...</p>;
     }
+    const saveData = () => {
+        const requestData = {
+            ...inp,  // Include data from the state
+            value,
+            finalAmount,
+            discount
+
+            // Include retail value
+        };
+        fetch('http://localhost:5000/cart', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            body: JSON.stringify(requestData),
+        })
+            .then((res) => res.json())
+            .then((response) => {
+                console.log(response);
+                // Handle success or further actions
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
     return (<>
         <MDBContainer>
             <MDBRow className="d-flex justify-content-between">
@@ -131,7 +159,6 @@ const ProductDetails = ({ updateValues }) => {
                                 <h3 className="text-capitalize">item price</h3>
                                 <h3 id="item_price">&#8377;{finalAmount}</h3>
                             </div>
-
                             <div className="warranty d-flex mt-3">
                                 <input className="warranty" type="checkbox" />
                                 <div className="warranty_text align-content-center">
@@ -205,21 +232,25 @@ const ProductDetails = ({ updateValues }) => {
                         </div>
                         <div className="px_15 dashed_btm total_items d-flex justify-content-between">
                             <h3 className="txt_cap">items in cart</h3>
-                            <h3>{value}</h3>
+                            {/* <h3>{value}</h3> */}
+                            <input type="text" name="value" value={value} />
                         </div>
 
                         <div className="px_15 dashed_btm cart_total d-flex justify-content-between">
                             <h3 className="txt_cap">cart total price</h3>
-                            <h3>&#8377;{finalAmount}</h3>
+                            {/* <h3>&#8377;{finalAmount}</h3> */}
+                            <input type="text" name="finalAmount" value={finalAmount} />
                         </div>
                         <div className="d-flex justify-content-between">
                             <h3 className="txt_cap">items in cart</h3>
                             <h3>{value}</h3>
+                            {/* <input type="text" name="finalAmount" value={value} /> */}
                         </div>
 
                         <div className="d-flex justify-content-between">
-                            <h3 className="txt_cap">cart total price</h3>
-                            <h3>&#8377;{finalAmount}</h3>
+                            <h3 className="txt_cap my-1">cart total price</h3>
+                            {/* <h3>&#8377;{finalAmount}</h3> */}
+                            <input type="text" name="finalAmount" value={finalAmount} />
                         </div>
                         <div className="d-flex justify-content-between">
                             <div className="d-flex justify-content-between">
@@ -230,7 +261,8 @@ const ProductDetails = ({ updateValues }) => {
                         </div>
                         <div className="d-flex justify-content-between">
                             <h4 className="txt_up">you saved</h4>
-                            <h3>&#8377;{discount}</h3>
+                            {/* <h3>&#8377;{discount}</h3> */}
+                            <input type="text" value={discount} name="discount" />
                         </div>
 
                     </div>
@@ -239,8 +271,8 @@ const ProductDetails = ({ updateValues }) => {
                         {/* <i class="fa-solid fa-chevron-right"></i> */}
                     </div>
                     <div className="checkout">
-                        <Link to={`/card/${id}`} state={{ productDetails, value, finalAmount, discount }}>
-                            <p>proceed to checkout</p>
+                        <Link to={`/card/${id}`} onClick={saveData} state={{ productDetails, value, finalAmount, discount }}>
+                            <p>Add to Card</p>
                         </Link>
                     </div>
                 </MDBCol>
