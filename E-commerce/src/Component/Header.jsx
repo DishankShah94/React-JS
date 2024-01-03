@@ -38,7 +38,6 @@ export default function App() {
                 <MDBCollapse navbar open={openBasic} className='list'>
                     <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
                         <MDBNavbarItem className='mr-auto m-2 mb-lg-0'>
-
                             <Link to="/" className='text-white'>Home</Link>
                         </MDBNavbarItem>
                         <MDBNavbarItem className='mr-auto m-2 mb-lg-0'>
@@ -50,7 +49,6 @@ export default function App() {
                         <MDBNavbarItem className='mr-auto m-2 mb-lg-0'>
                             <Link className='text-white'>contact us</Link>
                         </MDBNavbarItem>
-
                     </MDBNavbarNav>
                     <form className='d-flex input-group w-50 px-4'>
                         <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
@@ -60,7 +58,7 @@ export default function App() {
                         <Link className='text-color px-4'><i class="fa-solid fa-2x  fa-bell"></i></Link>
                     </MDBNavbarItem>
                     <MDBNavbarItem className='  border border-top-0 border-bottom-0'>
-                        <Link className='text-color px-4'><i class="fa-solid fa-2x fa-bag-shopping"></i></Link>
+                        <Link className='text-color px-4' to="/cart"><i class="fa-solid fa-2x fa-bag-shopping"></i></Link>
                     </MDBNavbarItem>
                     <MDBNavbarItem>
                         <MDBDropdown className='px-4'>

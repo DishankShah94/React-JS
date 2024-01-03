@@ -271,7 +271,10 @@ const ProductDetails = () => {
                         {/* <i class="fa-solid fa-chevron-right"></i> */}
                     </div>
                     <div className="checkout">
-                        <Link to={`/card/${id}`} onClick={saveData} state={{ productDetails, value, finalAmount, discount }}>
+                        {/* <Link to={`/card/${id}`} onClick={saveData} state={{ productDetails, value, finalAmount, discount }}>
+                            <p>Add to Card</p>
+                        </Link> */}
+                        <Link to={`/cart`} onClick={saveData} state={{ productDetails, value, finalAmount, discount }}>
                             <p>Add to Card</p>
                         </Link>
                     </div>

@@ -49,7 +49,7 @@ const Login = () => {
                         navigate("/admin");
                     } else {
                         console.log("Regular user login");
-                        navigate("/card");
+                        navigate("/");
                     }
                 } else {
                     console.log("User not found");

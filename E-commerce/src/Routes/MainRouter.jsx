@@ -8,6 +8,7 @@ import Chairs from "../Pages/Chairs";
 import Login from "../Component/Login";
 import Admin from "../Pages/Admin";
 import Card from "../Pages/Card";
+import Cart from "../Pages/Cart";
 const MainRouter = createBrowserRouter([
     {
         path: "/",
@@ -65,7 +66,13 @@ const MainRouter = createBrowserRouter([
             <ProductDetails />
         </>)
     },
-
+    {
+        path: "/cart",
+        element: (<>
+            <Header />
+            <Cart />
+        </>)
+    }
 ]);
 
 export default MainRouter;
