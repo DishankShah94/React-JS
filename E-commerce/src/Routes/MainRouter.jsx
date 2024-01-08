@@ -9,6 +9,7 @@ import Login from "../Component/Login";
 import Admin from "../Pages/Admin";
 import Card from "../Pages/Card";
 import Cart from "../Pages/Cart";
+import Buy from "../Pages/Buy";
 const MainRouter = createBrowserRouter([
     {
         path: "/",
@@ -71,6 +72,13 @@ const MainRouter = createBrowserRouter([
         element: (<>
             <Header />
             <Cart />
+        </>)
+    },
+    {
+        path: "/buy",
+        element: (<>
+            <Header />
+            <Buy />
         </>)
     }
 ]);
