@@ -72,9 +72,9 @@ export default function App() {
                                 <MDBDropdownItem className='my-2'>
                                     <Link className='text-white py-5'>my orders</Link>
                                 </MDBDropdownItem>
-                                <MDBDropdownItem className='my-2'>
+                                {/* <MDBDropdownItem className='my-2'>
                                     <Link to="/login" className='text-white py-2'>Login</Link>
-                                </MDBDropdownItem>
+                                </MDBDropdownItem> */}
                             </MDBDropdownMenu>
                         </MDBDropdown>
                     </MDBNavbarItem>

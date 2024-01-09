@@ -286,6 +286,18 @@
       "finalAmount": 19799.1,
       "discount": 2199.9,
       "id": 3
+    },
+    {
+      "value": "1",
+      "finalAmount": 19799.1,
+      "discount": 2199.9,
+      "id": 4
+    },
+    {
+      "value": "1",
+      "finalAmount": 19800,
+      "discount": 2200,
+      "id": 5
     }
   ]
 }
