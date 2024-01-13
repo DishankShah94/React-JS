@@ -40,6 +40,10 @@ const HeaderCompo = () => {
             url: "/registration"
         },
         {
+            title: "Login",
+            url: "/login"
+        },
+        {
             title: 'Services',
             url: '/services',
             submenu: [
@@ -103,7 +107,7 @@ const HeaderCompo = () => {
                     </MDBNavbarToggler>
 
                     <MDBCollapse navbar show={showBasic}>
-                        <MDBNavbarNav className='ms-auto w-auto mb-2 mb-lg-0 '>
+                        <MDBNavbarNav className='ms-auto w-auto mb-2 mb-lg-0'>
                             {MenuData}
 
                             <MDBNavbarItem>

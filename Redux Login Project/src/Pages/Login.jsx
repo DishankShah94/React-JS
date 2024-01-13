@@ -6,19 +6,24 @@ import { useDispatch } from "react-redux";
 const Login = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [message, setMessage] = useState("");
     const [state, setState] = useState({ formData: "" })
-
     const [loginError, setLoginError] = useState(false)
     const [serverError, setServerError] = useState(false)
     const setData = (event) => {
         setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
     }
+
+    // setMessage(message);
     let Login = (event) => {
         event.preventDefault()
         // Navigate("/login");
     }
+    const msger = () => {
+        setMessage("Please enter valid email id and password");
+    }
     const savedata = () => {
-        dispatch(loginCom(state))
+        dispatch(loginCom(state, navigate, msger))
     }
     return (<>
         <div className="container">
@@ -56,6 +61,7 @@ const Login = () => {
                                     </div>
 
                                 </div>
+                                <h3 className="text-center">{message}</h3>
                             </form>
                             <div className="row">
                                 <div className="col">

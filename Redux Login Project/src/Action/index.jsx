@@ -1,15 +1,14 @@
 import axios from "axios";
 import { FETCH_PRODUCTS } from "./types";
 import { LOGIN } from "./types";
-export const loginCom = (data) => {
-
+export const loginCom = (data, navigate, msg) => {
     return async (dispatch) => {
         fetch(`http://localhost:5000/users?uemail=${data.formData.uemail}&password=${data.formData.password}`).then((res) => { return res.json() }).then((response) => {
             dispatch({
                 type: LOGIN,
                 payload: response.data,
             });
-            // console.log(data.formData.uemail);
+            console.log(data.formData.uemail);
             if (response.length > 0) {
                 console.log(response[0].role);
                 // setLoginError(false)
@@ -20,11 +19,21 @@ export const loginCom = (data) => {
                     // navigate("/admin")
                 } else {
                     console.log("user");
-                }
+                    navigate("/");
 
+                }
             } else {
                 // setLoginError(true)
                 console.log("user not found");
+                msg();
+                data.setData((prevData) => ({
+                    ...prevData,
+                    formData: {
+                        ...prevData.formData,
+                        uemail: "",
+                        password: "",
+                    },
+                }));
             }
         }).catch((error) => {
             // setServerError(true)
