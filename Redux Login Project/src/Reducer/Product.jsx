@@ -1,7 +1,8 @@
 import {
     FETCH_PRODUCTS,
     LOGIN,
-    CLEAR_FORM
+    CLEAR_FORM,
+    ALLUSERS
 } from '../Action/types';
 
 const initialState = {
@@ -9,6 +10,7 @@ const initialState = {
     cart: [], // Initial empty array for cart
     login: [],
     formData: [],
+    users: [],
     productDetail: null,
 };
 
@@ -24,6 +26,12 @@ const productsReducer = (state = initialState, action) => {
                 ...state,
                 login: action.payload
             };
+        case ALLUSERS:
+            return {
+                ...state,
+                users: action.payload
+            }
+
 
         default:
             return state;

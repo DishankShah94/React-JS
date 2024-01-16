@@ -1,7 +1,10 @@
 import axios from "axios";
-import { FETCH_PRODUCTS } from "./types";
+import { ALLUSERS, FETCH_PRODUCTS } from "./types";
 import { LOGIN } from "./types";
+import { useState } from "react";
+
 export const loginCom = (data, navigate, msg) => {
+
     return async (dispatch) => {
         fetch(`http://localhost:5000/users?uemail=${data.formData.uemail}&password=${data.formData.password}`).then((res) => { return res.json() }).then((response) => {
             dispatch({
@@ -16,7 +19,8 @@ export const loginCom = (data, navigate, msg) => {
                 if (response[0].role == 1) {
                     // setCookie('admin', "true");
                     console.log("admin");
-                    // navigate("/admin")
+                    navigate("/admin")
+
                 } else {
                     console.log("user");
                     navigate("/");
@@ -88,5 +92,26 @@ export const registration = (data) => {
         }
     };
 };
+export const allData = () => {
+    return async (dispatch) => {
 
+        axios.get('http://localhost:5000/users')
+            .then(function (response) {
+
+                let usersdata = response.data.map((data) => {
+                    console.log(data);
+                    return <tr key={data.id}>
+                        <td>{data.uname}</td>
+                        <td>{data.uemail}</td>
+                        <td>{data.password}</td>
+                        <td>{data.umobile}</td>
+                    </tr>
+                })
+                dispatch({
+                    type: ALLUSERS,
+                    payload: response.data,
+                });
+            })
+    };
+}
 
