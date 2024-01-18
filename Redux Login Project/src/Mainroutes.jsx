@@ -3,6 +3,7 @@ import HeaderCompo from "./CommonCompo/HeaderCompo";
 import Registration from "./Pages/Regratation";
 import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
+import EditUser from "./Pages/EditUser";
 // import Home from "./Pages/Home";
 // import Accessstore from "./Pages/Accessstor";
 
@@ -33,6 +34,13 @@ const MainRouter = createBrowserRouter([
         element: <>
             <HeaderCompo />
             <Admin />
+        </>
+    },
+    {
+        path: "/edituser/:id",
+        element: <>
+            <HeaderCompo />
+            <EditUser />
         </>
     }
     // {

@@ -1,8 +1,9 @@
 import {
     FETCH_PRODUCTS,
     LOGIN,
-    CLEAR_FORM,
-    ALLUSERS
+    ALLUSERS,
+    EDITUSER,
+    DELETEUSER
 } from '../Action/types';
 
 const initialState = {
@@ -11,6 +12,8 @@ const initialState = {
     login: [],
     formData: [],
     users: [],
+    edit: [],
+    delete: [],
     productDetail: null,
 };
 
@@ -31,11 +34,20 @@ const productsReducer = (state = initialState, action) => {
                 ...state,
                 users: action.payload
             }
-
-
+        case EDITUSER:
+            return {
+                ...state,
+                edit: action.payload
+            }
+        case DELETEUSER:
+            return {
+                ...state,
+                delete: action.payload
+            }
         default:
             return state;
     }
 };
 
 export default productsReducer;
+

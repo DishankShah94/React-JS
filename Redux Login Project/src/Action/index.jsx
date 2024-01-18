@@ -1,7 +1,6 @@
 import axios from "axios";
-import { ALLUSERS, FETCH_PRODUCTS } from "./types";
+import { ALLUSERS, DELETEUSER, EDITUSER, FETCH_PRODUCTS } from "./types";
 import { LOGIN } from "./types";
-import { useState } from "react";
 
 export const loginCom = (data, navigate, msg) => {
 
@@ -97,7 +96,6 @@ export const allData = () => {
 
         axios.get('http://localhost:5000/users')
             .then(function (response) {
-
                 let usersdata = response.data.map((data) => {
                     console.log(data);
                     return <tr key={data.id}>
@@ -105,6 +103,7 @@ export const allData = () => {
                         <td>{data.uemail}</td>
                         <td>{data.password}</td>
                         <td>{data.umobile}</td>
+
                     </tr>
                 })
                 dispatch({
@@ -114,4 +113,39 @@ export const allData = () => {
             })
     };
 }
+export const edituser = (id, updatedData, navigate) => {
 
+    return async (dispatch) => {
+        try {
+            console.log('Updating user data...', id, updatedData);
+            const response = await axios.patch(`http://localhost:5000/users/${id}`, updatedData);
+            console.log("response", response);
+            dispatch({
+                type: EDITUSER,
+                payload: response.data,
+            });
+            navigate("/admin");
+        }
+        catch (ERROR) {
+            console.log(ERROR, "Error");
+        }
+    }
+
+}
+export const deleteUser = (id) => {
+
+    return async (dispatch) => {
+        try {
+            const response = await axios.delete(`http://localhost:5000/users/${id}`)
+            console.log("response", response);
+            dispatch({
+                type: DELETEUSER,
+                payload: response.data,
+            })
+            
+        } catch (error) {
+            console.log(error, "Error");
+        }
+    }
+
+}

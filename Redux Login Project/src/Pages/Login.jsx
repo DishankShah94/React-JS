@@ -10,7 +10,7 @@ const Login = () => {
     const [state, setState] = useState({ formData: "" })
     const [loginError, setLoginError] = useState(false)
     const [serverError, setServerError] = useState(false)
-        const setData = (event) => {
+    const setData = (event) => {
         setState((data) => ({ formData: { ...data.formData, [event.target.name]: event.target.value } }))
     }
 
@@ -24,8 +24,8 @@ const Login = () => {
         setMessage("Please enter valid email id and password");
     }
     const savedata = () => {
-        dispatch(loginCom(state, navigate, msger)) 
-        
+        dispatch(loginCom(state, navigate, msger))
+
     }
 
     return (<>
