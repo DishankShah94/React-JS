@@ -46,7 +46,7 @@ const Login = () => {
             .then((response) => {
                 if (response.length > 0) {
                     if (response[0].role === "1") {
-                        navigate("/admin");
+                        navigate("/admin")
                     } else {
                         console.log("Regular user login");
                         navigate("/buy");
