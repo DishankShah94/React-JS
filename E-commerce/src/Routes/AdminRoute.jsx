@@ -3,8 +3,8 @@ import { useRoutes } from 'react-router-dom';
 
 import AdminDashboard from '../Admin/AdminDashboard';
 import AllUsers from '../Admin/AllUsers';
-
-
+import EditUser from '../Admin/EditUser';
+import AddProduct from '../Admin/AddProduct';
 const AdminRoute = () => {
 
     const routes = useRoutes([
@@ -15,6 +15,14 @@ const AdminRoute = () => {
                 {
                     path: "allusers",
                     element: <AllUsers />,
+                },
+                {
+                    path: "edituser/:id",
+                    element: <EditUser />
+                },
+                {
+                    path: "addproduct",
+                    element: <AddProduct />
                 }
             ]
         }

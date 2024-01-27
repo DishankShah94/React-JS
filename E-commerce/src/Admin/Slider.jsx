@@ -44,6 +44,9 @@ export default function Slider() {
                 <Link to="allusers" className='d-flex'>All Users</Link>
             </ListItemButton>
             <ListItemButton>
+                <Link to="addproduct" className='mx-5 d-flex'>Add Product</Link>
+            </ListItemButton>
+            <ListItemButton>
                 <ListItemIcon>
                     <DraftsIcon />
                 </ListItemIcon>

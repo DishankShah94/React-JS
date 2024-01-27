@@ -16,13 +16,12 @@ const AllUsers = () => {
                 let usersdatastr = response.data.map((data) => {
                     console.log(data);
                     return <tr key={data.id}>
-                        <td><img style={{ width: "400px", height: "300px" }} src={`${process.env.PUBLIC_URL}/${data.image}`} alt={`Product ${data.id}`} /></td>
+                        <td><img style={{ width: "350px", height: "300px" }} src={`${process.env.PUBLIC_URL}/${data.image}`} alt={`Product ${data.id}`} /></td>
                         <td>{data.price}</td>
-
                         <td>
                             <Link to={`/admin/edituser/${data.id}`}>Edit</Link></td>
                         <td>
-                            <button>delete</button>
+                            <button onClick={() => deletedata(data.id)}>delete</button>
                         </td>
 
                     </tr>
@@ -39,12 +38,23 @@ const AllUsers = () => {
         //   // always executed
         // });
     }
+    let deletedata = async (id) => {
+        try {
+            await axios.delete(`http://localhost:5000/allProducts/${id}`)
+            console.log(id);
+            setAllUsers(allUsers.filter((post) => post.id !== id));
+            fetchData();
+        } catch (error) {
+            console.log("error", error);
+        }
+
+    }
     useEffect(() => {
         fetchData()
     }, [])
     return (
         <>
-            <div className="row box">
+            <div className="row">
                 <div className="col">
                     {loader ? <table className='table table-striped table-hover'>
                         <thead>
