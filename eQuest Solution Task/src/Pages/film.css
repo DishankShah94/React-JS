@@ -1,0 +1,30 @@
+.fs {
+    font-size: 10px;
+}
+
+.search {
+    box-shadow: 10px;
+}
+
+.card_color {
+    /* background-size: cover; */
+    background-color: lightgray;
+    padding: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 255, .2);
+}
+
+.card_color:hover {
+    background-color: rgba(211, 211, 211, 0.608);
+    transition: 0 all ease-in-out;
+}
+
+.btn {
+    /* width: 100%; */
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 10px;
+    color: darkblue;
+    background-color: rgba(55, 71, 76, 0.24);
+    border-radius: 10px;
+}
