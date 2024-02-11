@@ -5,7 +5,7 @@ const AllUsers = () => {
   let [allUsers, setAllUsers] = useState([]);
   let [loader, setLoader] = useState(false);
   let fetchData = async () => {
-    axios.get('http://localhost:5000/users')
+   await axios.get('http://localhost:5000/users')
       .then(function (response) {
         console.log(response.data);
         let userdatastr = response.data.map((data) => {

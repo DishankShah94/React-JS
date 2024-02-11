@@ -6,7 +6,7 @@ const AddProduct = () => {
     const [state, setState] = useState({ formData: "" });
     const navigate = useNavigate();
     const { handleChange, inp, error } = CustomHookAddProduct({
-        image: null,
+        image: '',
         price: "",
         description: ""
     });

@@ -1,5 +1,5 @@
 import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import "./assests/SpecialOffers.css"
+// import "./assests/SpecialOffers.css"
 import { Link } from 'react-router-dom';
 const SpcialOffers = () => {
 

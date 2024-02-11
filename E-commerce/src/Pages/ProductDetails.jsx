@@ -1,7 +1,7 @@
 import { MDBCard, MDBCardImage, MDBCol, MDBCardBody, MDBCardTitle, MDBCardText, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "../Component/assests/ProductDetails.css";
+// import "../Component/assests/ProductDetails.css";
 import CustomHookAllProduct from "../Component/Hooks/CustomHookAllProduct";
 const ProductDetails = () => {
     const [productDetails, setProductDetails] = useState();

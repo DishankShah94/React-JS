@@ -1,5 +1,5 @@
 import { MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import "../Component/assests/footer.css"
+// import "../Component/assests/footer.css"
 
 const Footer = () => {
     return (<>
@@ -139,8 +139,8 @@ const Footer = () => {
                                 <li><a href="#">Sofas,Sectional Sofas,Sofa Sets,Queen Size Beds</a></li>
                                 <li><a href="#">Sofas,Sectional Sofas,Sofa Sets,Queen Size Beds</a></li>
                             </ul>
-                        </div>                
-                        </MDBCol>
+                        </div>
+                    </MDBCol>
                     <MDBCol lg='4'>
                         <div className="footer_text footer_text_2">
                             <h3 className="txt_cap">Popular Categories</h3>

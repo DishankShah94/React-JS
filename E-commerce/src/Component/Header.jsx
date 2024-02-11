@@ -14,7 +14,7 @@ import {
     MDBDropdownItem,
     MDBCollapse,
 } from 'mdb-react-ui-kit';
-import "./assests/Header.css";
+// import "./assests/Header.css";
 import { Link } from 'react-router-dom';
 export default function App() {
     const [openBasic, setOpenBasic] = useState(false);
@@ -23,7 +23,7 @@ export default function App() {
         <MDBNavbar expand='lg' className='body'>
             <MDBContainer fluid>
                 <MDBNavbarBrand href='#'>
-                    <img src="assets/images/logo.png" alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} alt="" />
                 </MDBNavbarBrand>
 
                 <MDBNavbarToggler
@@ -52,7 +52,7 @@ export default function App() {
                     </MDBNavbarNav>
                     <form className='d-flex input-group w-50 px-4'>
                         <input type='search' className='form-control' placeholder='Type query' aria-label='Search' />
-                        <MDBBtn className='text-white btn-bg'><i class="fa-solid fa-magnifying-glass posi_ab "></i></MDBBtn>
+                        <MDBBtn className='text-white btn-bg'><i class="fa-solid fa-magnifying-glass posi_ab"></i></MDBBtn>
                     </form>
                     <MDBNavbarItem >
                         <Link className='text-color px-4'><i class="fa-solid fa-2x  fa-bell"></i></Link>

@@ -1,10 +1,10 @@
-body {
+/* body {
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     background: #ebebeb;
-}
+} */
 
-.lng-input,
-.lg-btn {
+.lng-input1,
+.lg-btn1 {
     border: none;
     outline: none;
     background: none;
@@ -20,31 +20,33 @@ body {
 }
 
 
-.cont {
+.cont1 {
     border-radius: 20px;
     overflow: hidden;
     /* position: relative; */
     width: 900px;
     height: 500px;
     margin: 0 auto 100px;
-    background: #fff;
+    /* background: #fff;     */
+    background-color: #455a81;
+
     /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15); */
 }
 
-.form {
+.form1 {
     position: relative;
-    width: 640px;
-    height: 100%;
+    /* width: 640px; */
+    /* height: 100%;         */
     padding: 50px 30px 0;
 }
 
-.sub-cont {
+.sub-cont1 {
     overflow: hidden;
     position: absolute;
     z-index: 11;
     right: 217px;
     top: 147px;
-    /* width: 900px; */
+    width: 900px;
     height: 498px;
     padding-left: 260px;
     background: #303030;
@@ -52,7 +54,7 @@ body {
 
 }
 
-.lg-btn {
+.lg-btn1 {
     display: block;
     margin: 0 auto;
     width: 230px;
@@ -160,20 +162,17 @@ body {
     text-align: center;
 }
 
-label {
+.fnt {
     display: block;
     width: 260px;
     margin: 25px auto 0;
     text-align: center;
-}
-
-.fnt {
     font-size: 15px;
     color: #544d4d;
     text-transform: uppercase;
 }
 
-.lng-input {
+.lng-input1 {
     display: block;
     width: 100%;
     margin-top: 5px;
@@ -190,7 +189,7 @@ label {
     color: #544d4d;
 }
 
-.submit {
+.submit1 {
     margin-top: 40px;
     margin-bottom: 20px;
     background: #ffc564;
@@ -207,6 +206,6 @@ label {
     color: #455a81;
 }
 
-.mt {
+.mt1 {
     margin-top: 60px;
 }

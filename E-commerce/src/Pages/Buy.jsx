@@ -2,12 +2,16 @@ import emailjs from 'emailjs-com';
 const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
-        'service_dpx5jj1',
-        'template_od8o01j',
+        'service_dpx5jj1', //service key
+        'template_od8o01j', // template id
         e.target,
-        'Ztan2sxgma7CiG4cP'
-    ).then(res => { console.log(res) }
+        'Ztan2sxgma7CiG4cP' // public key
+    ).then(res => {
+        console.log(res);
+        e.target.reset();
+    }
     )
+
     // console.log("called");
 }
 const Buy = () => {

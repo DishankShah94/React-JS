@@ -1,5 +1,5 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
-import '../Component/assests/chair.css'
+// import '../Component/assests/chair.css'
 const Chairs = () => {
 
     return (<>

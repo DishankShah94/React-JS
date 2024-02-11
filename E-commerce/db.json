@@ -59,6 +59,12 @@
       "image": "./assets/images/product-10.png",
       "discription": "Claven Fabric LHS Pull Out Sofa Cum Bed In Charcoal Grey Colour With Storage Claven Fabric LHS Pull Out",
       "price": "21,999"
+    },
+    {
+      "image": "./assets/images/C:\\fakepath\\product-8.png",
+      "price": "10000",
+      "description": "ddddd",
+      "id": 11
     }
   ],
   "ChairCategory": [
@@ -358,6 +364,42 @@
       "finalAmount": 19800,
       "discount": 2200,
       "id": 16
+    },
+    {
+      "value": "1",
+      "finalAmount": 19800,
+      "discount": 2200,
+      "id": 17
+    },
+    {
+      "value": "1",
+      "finalAmount": 19800,
+      "discount": 2200,
+      "id": 18
+    },
+    {
+      "value": "5",
+      "finalAmount": 99000,
+      "discount": 11000,
+      "id": 19
+    },
+    {
+      "value": "1",
+      "finalAmount": 19799.1,
+      "discount": 2199.9,
+      "id": 20
+    },
+    {
+      "value": "1",
+      "finalAmount": 19800,
+      "discount": 2200,
+      "id": 21
+    },
+    {
+      "value": "1",
+      "finalAmount": 19800,
+      "discount": 2200,
+      "id": 22
     }
   ]
 }
