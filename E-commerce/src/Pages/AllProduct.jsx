@@ -25,10 +25,10 @@ const AllProduct = () => {
             <MDBRow>
                 {product.map((product, index) => (
 
-                    <MDBCol md="4" key={index}>
+                    <MDBCol md="12" lg="4" key={index}>
                         <Link to={"/productsdetails/" + product.id}>
                             <MDBCard>
-                                <MDBCardImage src={product.image} position='top' alt='...' style={{ width: "400px", height: "300px" }} />
+                                <MDBCardImage src={product.image} position='top' alt='...' style={{ width: "400px", height: "300px" }} className="d-block mx-auto" />
                                 <MDBCardBody>
                                     <MDBCardTitle>{product.discription}</MDBCardTitle>
                                     <MDBCardText>

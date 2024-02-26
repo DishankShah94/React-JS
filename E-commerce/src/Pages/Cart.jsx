@@ -27,7 +27,7 @@ const Cart = () => {
             <MDBRow>
                 {cart.map((cart, index) => (
 
-                    <MDBCol md="4" key={index}>
+                    <MDBCol md="6" lg="4" sm="12" key={index}>
                         {/* <Link to={"/productsdetails/" + product.id}> */}
                         <MDBCard>
                             {/* <MDBCardImage src={product.image} position='top' alt='...' style={{ width: "400px", height: "300px" }} /> */}

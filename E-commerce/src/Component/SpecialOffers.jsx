@@ -19,7 +19,7 @@ const SpcialOffers = () => {
                         <button class="position-absolute end-0 bottom-0 txt_cap banner_btn_1">explore now</button>
                     </div>
                 </MDBCol>
-                <MDBCol size='3' lg="5" md="12" sm="12  ">
+                <MDBCol size='3' lg="5" md="12" sm="12">
                     <div className="position-relative my-3">
                         <img className="w-100 square bg-primary rounded-5" src="./assets/images/banner-img-2.png" alt="" />
                         <div className="banner_text_2 position-absolute bottom-0 start-0">

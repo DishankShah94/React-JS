@@ -12,6 +12,7 @@ import Card from "../Pages/Card";
 import Cart from "../Pages/Cart";
 import Buy from "../Pages/Buy";
 import React, { Suspense } from "react";
+import ChairsDetails from "../Pages/ChairsDetails";
 const AdminRoute = React.lazy(() => import("./AdminRoute"))
 const MainRouter = createBrowserRouter([
     {
@@ -46,7 +47,9 @@ const MainRouter = createBrowserRouter([
         element: (
             <>
                 <Header />
+                <SpcialOffers />
                 <Chairs />
+                <Footer />
             </>
         )
     },
@@ -63,6 +66,13 @@ const MainRouter = createBrowserRouter([
         element: (<>
             <Header />
             <ProductDetails />
+        </>)
+    },
+    {
+        path: "/ChairsDetails/:id",
+        element: (<>
+            <Header />
+            <ChairsDetails />
         </>)
     },
     {
@@ -83,7 +93,7 @@ const MainRouter = createBrowserRouter([
         path: "/admin/*",
         element: (<>
             <Suspense fallback={<h2>loading...</h2>}><AdminRoute /></Suspense>
-        
+
         </>)
     }
 ]);

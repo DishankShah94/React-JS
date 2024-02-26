@@ -59,44 +59,38 @@
       "image": "./assets/images/product-10.png",
       "discription": "Claven Fabric LHS Pull Out Sofa Cum Bed In Charcoal Grey Colour With Storage Claven Fabric LHS Pull Out",
       "price": "21,999"
-    },
-    {
-      "image": "./assets/images/C:\\fakepath\\product-8.png",
-      "price": "10000",
-      "description": "ddddd",
-      "id": 11
     }
   ],
   "ChairCategory": [
     {
       "id": 1,
-      "image": "./assets/images/select-all.png",
-      "discription": "All"
+      "image": "./assets/images/rocking.png",
+      "discription": "Claven Fabric LHS Pull Out Sofa Cum Bed In Charcoal Grey Colour With Storage Claven Fabric LHS Pull Out",
+      "price": "10000"
     },
     {
       "id": 2,
-      "image": "./assets/images/rocking.png",
-      "discription": "Rocking"
+      "image": "./assets/images/folding.png",
+      "discription": "Claven Fabric LHS Pull Out Sofa Cum Bed In Charcoal Grey Colour With Storage Claven Fabric LHS Pull Out",
+      "price": "10000"
     },
     {
       "id": 3,
-      "image": "./assets/images/folding.png",
-      "discription": "Folding"
+      "image": "./assets/images/iconic.png",
+      "discription": "Claven Fabric LHS Pull Out Sofa Cum Bed In Charcoal Grey Colour With Storage Claven Fabric LHS Pull Out",
+      "price": "10000"
     },
     {
       "id": 4,
-      "image": "./assets/images/iconic.png",
-      "discription": "Iconic"
+      "image": "./assets/images/cafe.png",
+      "discription": "Claven Fabric LHS Pull Out Sofa Cum Bed In Charcoal Grey Colour With Storage Claven Fabric LHS Pull Out",
+      "price": "10000"
     },
     {
       "id": 5,
-      "image": "./assets/images/cafe.png",
-      "discription": "Cafe"
-    },
-    {
-      "id": 6,
       "image": "./assets/images/armchair.png",
-      "discription": "Armchair"
+      "discription": "Claven Fabric LHS Pull Out Sofa Cum Bed In Charcoal Grey Colour With Storage Claven Fabric LHS Pull Out",
+      "price": "10000"
     }
   ],
   "ChairData": [
@@ -385,12 +379,6 @@
     },
     {
       "value": "1",
-      "finalAmount": 19799.1,
-      "discount": 2199.9,
-      "id": 20
-    },
-    {
-      "value": "1",
       "finalAmount": 19800,
       "discount": 2200,
       "id": 21
@@ -400,6 +388,12 @@
       "finalAmount": 19800,
       "discount": 2200,
       "id": 22
+    },
+    {
+      "value": "5",
+      "finalAmount": 45000,
+      "discount": 5000,
+      "id": 23
     }
   ]
 }
