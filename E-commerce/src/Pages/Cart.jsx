@@ -57,10 +57,10 @@ const Cart = () => {
                                             {/* <input type="text" name="finalAmount" value={finalAmount} /> */}
                                         </div>
                                         <div className="checkout">
-                                            <button className="w-100 bg-warning py-2" onClick={() => deletePost(cart.id)}>Remove</button>
+                                            <button className="w-100 bg-warning py-2 mt-2 rounded-3" onClick={() => deletePost(cart.id)}>Remove</button>
                                         </div>
                                         <div>
-                                            <Link to="/login" className="d-block mx-auto">BuyNow</Link>
+                                            <Link to="/login" className="d-block mt-3 text-center text-black p-3 bg-warning bg-gradient rounded-3">BuyNow</Link>
                                         </div>
                                     </div>
                                 </MDBCardText>

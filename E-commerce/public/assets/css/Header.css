@@ -1,5 +1,5 @@
 .body {
-    background-color: #303030;
+    background-color: #303030 !important;
 }
 
 .list {
@@ -9,6 +9,15 @@
 
 .text-color {
     color: #ffc564;
+}
+
+
+.drop {
+    color: white;
+}
+
+.drop2 {
+    background-color: black;
 }
 
 .btn-bg {

@@ -6,8 +6,12 @@
     font-size: 1rem;
 }
 
-.back-color {
+.back-color:focus {
     background-color: #ffc564;
+}
+
+.back-color {
+    border: 1px solid black;
 }
 
 .categories {

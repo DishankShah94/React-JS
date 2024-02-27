@@ -24,11 +24,11 @@
     border-radius: 20px;
     overflow: hidden;
     /* position: relative; */
-    width: 900px;
+    /* width: 900px; */
     height: 500px;
     margin: 0 auto 100px;
     /* background: #fff;     */
-    background-color: #455a81;
+    /* background-color: #455a81; */
 
     /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.3), 10px 10px 15px rgba(70, 70, 70, 0.15), inset -10px -10px 15px rgba(255, 255, 255, 0.3), inset 10px 10px 15px rgba(70, 70, 70, 0.15); */
 }

@@ -10,6 +10,10 @@
     padding: 20px;
 }
 
+.bo {
+    border: none;
+}
+
 .img_cart {
     aspect-ratio: 2/1;
 }

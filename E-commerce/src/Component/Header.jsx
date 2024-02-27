@@ -66,11 +66,14 @@ export default function App() {
                                 Dropdown
                             </MDBDropdownToggle>
                             <MDBDropdownMenu className=' mt-4 mr body border text-center '>
-                                <MDBDropdownItem className='my-2'>
-                                    <Link className='text-white '>my account</Link>
+                                <MDBDropdownItem className='my-2 drop2'>
+                                    <Link className='drop'>my account</Link>
                                 </MDBDropdownItem>
-                                <MDBDropdownItem className='my-2'>
-                                    <Link className='text-white py-5'>my orders</Link>
+                                <MDBDropdownItem className='my-2 drop2'>
+                                    <Link className='drop'>my orders</Link>
+                                </MDBDropdownItem>
+                                <MDBDropdownItem className='my-2 drop2'>
+                                    <Link to="/login" className='drop'>Login</Link>
                                 </MDBDropdownItem>
                                 {/* <MDBDropdownItem className='my-2'>
                                     <Link to="/login" className='text-white py-2'>Login</Link>

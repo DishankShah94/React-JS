@@ -16,7 +16,7 @@ const SpcialOffers = () => {
                             <p className=" mt-3 ps-3 text-white w-75">There are many variations of passages of Lorem Ipsum available,
                                 but the majority have suffered alteration in some form, by injected </p>
                         </div>
-                        <button class="position-absolute end-0 bottom-0 txt_cap banner_btn_1">explore now</button>
+                        {/* <button class="position-absolute end-0 bottom-0 txt_cap banner_btn_1">explore now</button> */}
                     </div>
                 </MDBCol>
                 <MDBCol size='3' lg="5" md="12" sm="12">
@@ -28,7 +28,7 @@ const SpcialOffers = () => {
                             <p className="mt-3 ps-3 text-white font_1rem w-75">There are many variations of
                                 passages of Lorem Ipsum available,</p>
                         </div>
-                        <button class="position-absolute bottom-0 end-0 txt_cap">Buy now</button>
+                        {/* <button class="position-absolute bottom-0 end-0 txt_cap">Buy now</button> */}
                     </div>
                 </MDBCol>
             </MDBRow>
@@ -37,12 +37,12 @@ const SpcialOffers = () => {
             <MDBRow>
                 <MDBCol size="6" lg="12" md="12" sm="12">
 
-                    <Link to="/" className='back-color text-black px-3 py-2 square rounded-3'>All Product</Link>
-                    <Link to="/chair" className='text-black  categories mx-2 px-3 py-2 square rounded-3'>Chair</Link>
-                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Sofa</Link>
-                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Stool</Link>
-                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Footstool</Link>
-                    <Link to="" className='categories text-black mx-2 px-3 py-2 square rounded-3'>Office</Link>
+                    <Link to="/" className='back-color categories text-black px-3 py-2 square rounded-3'>All Product</Link>
+                    <Link to="/chair" className='back-color text-black  categories mx-2 px-3 py-2 square rounded-3'>Chair</Link>
+                    <Link to="" className='back-color categories text-black mx-2 px-3 py-2 square rounded-3'>Sofa</Link>
+                    <Link to="" className='back-color categories text-black mx-2 px-3 py-2 square rounded-3'>Stool</Link>
+                    <Link to="" className='back-color categories text-black mx-2 px-3 py-2 square rounded-3'>Footstool</Link>
+                    <Link to="" className='back-color categories text-black mx-2 px-3 py-2 square rounded-3'>Office</Link>
                 </MDBCol>
             </MDBRow>
         </MDBContainer>

@@ -30,8 +30,8 @@ const Chairs = () => {
                             <MDBCard>
                                 <MDBCardImage src={chair.image} position='top' alt='...' style={{ width: "400px", height: "300px" }} className="d-block mx-auto" />
                                 <MDBCardBody>
-                                    <MDBCardTitle>{chair.discription}</MDBCardTitle>
-                                    <MDBCardText>
+                                    <MDBCardTitle className="text-black">{chair.discription}</MDBCardTitle>
+                                    <MDBCardText className="text-black">
                                         {chair.price}
                                     </MDBCardText>
 

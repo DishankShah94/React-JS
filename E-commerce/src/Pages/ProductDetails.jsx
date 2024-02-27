@@ -217,7 +217,7 @@ const ProductDetails = () => {
                 <MDBCol>
                     {/* <div className="cart_card"> */}
                     <div className="pincode posi_rel mt-5">
-                        <input type="text" className="w-100 square rounded-start p-3 " placeholder="Enter Pincode" />
+                        <input type="text" className="w-100 square rounded-start p-3 bo" placeholder="Enter Pincode" />
                         {/* <i class="posi_ab locate fa-solid fa-location-crosshairs"></i> */}
                     </div>
                     {/* </div> */}
@@ -242,8 +242,8 @@ const ProductDetails = () => {
                             <input type="text" name="finalAmount" value={finalAmount} />
                         </div>
                         <div className="d-flex justify-content-between">
-                            <h3 className="txt_cap">items in cart</h3>
-                            <h3>{value}</h3>
+                            {/* <h3 className="txt_cap">items in cart</h3> */}
+                            {/* <h3>{value}</h3> */}
                             {/* <input type="text" name="finalAmount" value={value} /> */}
                         </div>
 

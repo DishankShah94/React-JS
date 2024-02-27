@@ -30,9 +30,9 @@ const AllProduct = () => {
                             <MDBCard>
                                 <MDBCardImage src={product.image} position='top' alt='...' style={{ width: "400px", height: "300px" }} className="d-block mx-auto" />
                                 <MDBCardBody>
-                                    <MDBCardTitle>{product.discription}</MDBCardTitle>
-                                    <MDBCardText>
-                                        {product.price}
+                                    <MDBCardTitle className="text-black">{product.discription}</MDBCardTitle>
+                                    <MDBCardText className="text-black" >
+                                        RS. {product.price}/-
                                     </MDBCardText>
                                     {/* <MDBBtn href='#'>Many nore</MDBBtn> */}
                                 </MDBCardBody>
